@@ -1,0 +1,4013 @@
+@import url('https://googleapis.com');
+@keyframes glissement {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0; /* Invisible au départ */
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes glissement2 {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+* {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+div.menuEleve {
+animation: glissement 0.4s ease-out forwards !important;
+transition: background-color 0.3s ease-in-out !important;
+}
+
+/* div.mozaikBanniere {
+  padding-top: 20px !important;
+} */
+
+
+div.detail__travailSemaine {
+  border-radius: 15px !important;
+  font-weight: 100 !important;
+  font-style: normal !important;
+  line-height: 24px !important;
+  border-style: solid !important;
+  text-align: left !important;
+  text-transform: none !important;
+  border-width: 3px !important;
+  background-color: rgb(250,250,250) !important;
+  transition: background-color 0.3s ease-in-out !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  max-height: 368px !important;
+}
+
+div.detail__resTrav {
+  animation: glissement2 0.5s ease-out !important;
+}
+
+body[data-theme="dark"] div.detail__travailSemaine {
+  background-color: rgb(30,30,30) !important;
+
+}
+
+body[data-theme="dark"] div.detail__travailSemaine {
+  border-color: rgb(120, 120, 120) !important;
+}
+
+div.detail__resultat {
+  border-radius: 15px !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  line-height: 24px !important;
+  border-style: solid !important;
+  text-align: left !important;
+  text-transform: none !important;
+  border-width: 3px !important;
+  background-color: rgb(250,250,250) !important;
+  transition: background-color 0.3s ease-in-out !important;
+}
+
+body[data-theme="dark"] div.detail__resultat {
+  background-color: rgb(30,30,30) !important;
+}
+
+body[data-theme="dark"] div.detail__resultat {
+  border-color: rgb(120, 120, 120) !important;
+}
+
+div.detail__message {
+  border-radius: 15px !important;
+  font-weight: 100 !important;
+  font-style: normal !important;
+  border-style: solid !important;
+  text-align: left !important;
+  text-transform: none !important;
+  box-sizing: 150px !important;
+  border-width: 3px !important;
+  background-color: rgb(250,250,250) !important;
+  animation: glissement2 0.65s ease-out!important;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+  max-height: 635px !important;
+  min-height: 635px !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(10, 10, 10, 0.5) transparent !important;
+  scroll-behavior: smooth !important;
+  transition: all 0.3s ease-in-out !important;
+
+}
+
+body[data-theme="dark"] div.detail__message {
+  background-color: rgb(30,30,30) !important;
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent !important;
+  border-color: rgb(120, 120, 120) !important;
+}
+
+div.detail__horaire {
+  border-radius: 15px !important;
+  font-weight: 100 !important;
+  font-style: normal !important;
+  line-height: 24px !important;
+  border-style: solid !important;
+  text-align: left !important;
+  text-transform: none !important;
+  border-width: 3px !important;
+  background-color: rgb(250,250,250) !important;
+  animation: glissement2 0.45s ease-out;
+  transition: all 0.3s ease-in-out !important;
+  padding-bottom: 0px !important;
+  padding: 10px !important;
+}
+
+body[data-theme="dark"] div.detail__horaire {
+  background-color: rgb(30,30,30) !important;
+}
+
+body[data-theme="dark"] div.detail__horaire {
+  border-color: rgb(120, 120, 120) !important;
+}
+
+div.tuile__corps.icone--resultat.tuile--resultats {
+  border-radius: 8px !important;
+  margin-top: 8px !important;
+  background-color: rgb(250, 250, 250) !important;
+  border: 2px #dedede solid !important;
+  display: flex !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+body[data-theme="dark"] div.tuile__corps.icone--resultat.tuile--resultats {
+  background-color: rgb(30, 30, 30) !important;
+  border-color: rgb(120, 120, 120) !important ;
+}
+
+div.tuile__corps.icone--autobus.tuile--transport {
+  border-radius: 8px !important;
+  margin-top: 8px !important;
+  background-color: rgb(250, 250, 250) !important;
+  border: 2px #dedede solid !important;
+  display: flex !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+body[data-theme="dark"] div.tuile__corps.icone--autobus.tuile--transport {
+  background-color: rgb(30, 30, 30) !important;
+  border-color: rgb(120, 120, 120) !important ;
+}
+
+div div nav {
+  border-radius: 15px !important;
+  border-bottom-width: 20px !important;
+  border-bottom-style: none !important;
+
+}
+
+div.section.d-section {
+  border-radius: 15px !important;
+  margin-bottom: -10px !important;
+  background-color: transparent !important;
+}
+
+body[data-theme="dark"] div.section.d-section {
+  background-color: transparent !important;
+}
+
+div.iconeRegroupement.iconeRegroupement__derniersResultats {
+  border-radius: 8px !important;
+  height: 30px !important;
+  width: 30px !important;
+  border-style: none !important;
+  background-size: 27.5px !important;
+  background-position-x: 1px !important;
+  background-position-y: 1px !important;
+  background-image: url(https://static.wixstatic.com/media/08b457_0615c6a2bdb74401b039bd0daa2bd5ad~mv2.png) !important;
+}
+
+div.iconeRegroupement.iconeRegroupement__travailSemaine {
+  border-radius: 8px !important;
+  height: 30px !important;
+  width: 30px !important;
+  border-style: none !important;
+  background-size: 27.5px !important;
+  background-position-x: 1px !important;
+  background-position-y: 1px !important;
+  background-image: url(https://static.wixstatic.com/media/08b457_6a2be09233e347fd8a024a5e28992d09~mv2.png) !important;
+}
+
+div.iconeRegroupement.iconeRegroupement__messages {
+  border-radius: 8px !important;
+  margin-bottom: 3px !important;
+  height: 30px !important;
+  width: 30px !important;
+  border-style: none !important;
+  background-size: 24px !important;
+  background-position-x: 3px !important;
+  background-position-y: 3px !important;
+  background-image: url(https://static.wixstatic.com/media/08b457_e235d084c25c4809b1cb8e3b6fe0457e~mv2.png) !important;
+}
+
+div.maVieScolaire__vue .detail__titre {
+  vertical-align: 12px !important;
+}
+
+
+div.astuce.visible {
+  display: none !important;
+}
+
+ul.listeTuiles {
+  border-radius: 15px !important;
+  background-color: transparent !important;
+  padding-right: 3px !important;
+  animation: glissement2 0.4s ease-in-out !important;
+}
+body[data-theme="dark"] ul.listeTuiles {
+  background-color: transparent !important;
+}
+
+.maVieScolaire__vue .detail__horaire, .maVieScolaire__vue .detail__message, .maVieScolaire__vue .detail__resultat, .maVieScolaire__vue .detail__travailSemaine {
+    margin-bottom: 10px  !important;
+}
+
+div.maVieScolaire__vue .detail__titre {
+  vertical-align: 12px  !important;
+}
+
+h3.messages__titre {
+  vertical-align: 12px !important;
+  font-family: 'Rubik', sans-serif !important;
+  font-weight: normal !important;
+  padding-left: 8px !important;
+}
+
+body[data-theme="dark"] h3.messages__titre {
+  color: white !important;
+}
+
+div.navigationHoraire--jour.precedentSuivant {
+  margin-top: 0px !important;
+  border-radius: 15px !important;
+  padding-top: 12px !important;
+
+}
+
+div.grilleHoraire__contenu.grilleHoraire__contenu--journee {
+  border-radius: 15px !important;
+}
+
+div div ul {
+  border-radius: 6px !important;
+}
+
+#monProfil {
+  border-radius: 15px !important;
+}
+#changerSelection {
+  border-radius: 15px !important;
+}
+li#li-theme-willixau {
+border-radius: 15px !important;
+}
+
+#deconnexion {
+  border-radius: 15px !important;
+  border-top: 0px !important;
+}
+
+li.derniersResultats__unTravail {
+  border-radius: 5px !important;
+}
+
+body[data-theme="dark"] li.derniersResultats__unTravail {
+  color: white !important;
+}
+
+li.listeCours__item.actif {
+  border-radius: 5px !important;
+  font-family: 'Rubik', sans-serif !important;
+  --background-color: rgb(220, 220, 220) !important;
+  transform: scale(0.995, 0.995) !important;
+  transition: all 0.3s ease-in-out !important;
+  background-color: transparent !important;
+}
+
+li.listeCours__item {
+  border-radius: 5px !important;
+  font-family: 'Rubik', sans-serif !important;
+  animation: deroulement 2s linear forwards !important;
+  transition: max-width 0.15s linear, all 0.2s !important;
+  background-color: transparent !important;
+}
+
+
+
+/*li.listeCours__item::before {
+  content: "";
+  position: absolute;
+  background-image: url(https://static.wixstatic.com/media/08b457_09d3bedfb9a440dcb02e5837614a3966~mv2.png);
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 12%;
+  background-size: 30px;
+  margin: 8px;
+  user-select: none;
+  z-index: 0;
+
+}*/
+
+li.listeCours__item:hover {
+  border-radius: 5px !important;
+  font-family: 'Rubik', sans-serif !important;
+  transform: scale(0.995, 0.995) !important;
+
+}
+body[data-theme="dark"] a.coursItem__description {
+  background-color: rgb(60, 60, 60) !important;
+  border-color: rgb(60, 60, 60) !important;
+}
+
+img.icone--approuve {
+  visibility: hidden !important;
+}
+
+div.iconeRegroupement.iconeRegroupement__ressources {
+  border-radius: 8px !important;
+  height: 30px !important;
+  width: 30px !important;
+  border-style: none !important;
+  background-size: 27.5px !important;
+  background-position-x: 1px !important;
+  background-position-y: 1px !important;
+  background-image: url(https://static.wixstatic.com/media/08b457_dfae91fafb6043b5a06f632c3a780766~mv2.png) !important;
+}
+
+h2.menuEleve__titre--texte {
+  font-family: 'Rubik', sans-serif !important;
+  margin-right: 100px !important;
+  color: rgb(30, 30, 30) !important;
+}
+
+h3.descriptionMatiere {
+  font-family: 'Rubik', sans-serif  !important;
+  --padding-left: 50px !important;
+}
+
+div.detailCours__matiere::before {
+  background-image: none !important;
+}
+
+body[data-theme="dark"] h3.descriptionMatiere {
+  color: rgb(255, 255, 255) !important;
+}
+
+div h4 span {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+body[data-theme="dark"] div h4 span {
+  color: white !important;
+}
+label.smpGroupeDonneesTitre {
+  font-family: 'Rubik', sans-serif !important;
+  margin-top: -14px !important;
+  margin-left: -15px !important;
+  visibility: hidden !important;
+}
+
+body[data-theme="dark"] label.smpGroupeDonneesTitre {
+  color: white !important;
+}
+
+h3.detail__titre {
+  font-family: 'Rubik', sans-serif !important;
+  font-weight: normal !important;
+}
+
+body[data-theme="dark"] h3.detail__titre {
+  color: white !important;
+}
+
+span.jour {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+body[data-theme="dark"] span.jour {
+  font-family: 'Rubik', sans-serif !important;
+}
+span.mois {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+body[data-theme="dark"] span.mois {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+nav div span {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+body[data-theme="dark"] nav div span {
+  color: white !important;
+}
+
+span.jourSemaine {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+div.parametreHoraire__tiroir {
+  border-radius: 15px !important;
+  box-shadow: none !important;
+  z-index: 1000 !important;
+  background-color: rgb(250, 250, 250) !important;
+  margin: 0 !important;
+  border-width: 3px !important;
+  border-style: solid !important;
+  border-color: rgb(200, 200, 200) !important;
+}
+
+.tiroir:has(> div.parametreHoraire__tiroir) {
+  position: absolute !important;
+  z-index: 1000 !important;
+  right: 0 !important;
+}
+
+body[data-theme="dark"] div.parametreHoraire__tiroir {
+  color: white !important;
+  background-color: rgb(30, 30, 30) !important;
+}
+
+a.parametreHoraire__lienTiroir.lienOuvrirTiroir.voirPlus::after {
+  background-image: none !important;
+  display: none !important;
+
+}
+
+a.parametreHoraire__lienTiroir.lienOuvrirTiroir.voirPlus.voirPlusOuvert {
+  outline-width: 0px !important;
+}
+
+a.parametreHoraire__lienTiroir.lienOuvrirTiroir.voirPlus {
+  outline-width: 0px !important;
+  background-image: url(https://static.wixstatic.com/media/08b457_923a0ae6b69e46ad9e2496ab5a7c1aa8~mv2.png) !important;
+  background-color: transparent !important;
+  background-position: center;
+  box-shadow: none !important;
+  transform: rotate(30deg) !important;
+}
+
+a.parametreHoraire__lienTiroir.lienOuvrirTiroir.voirPlus:hover {
+  transform: rotate(150deg) !important;
+}
+
+body[data-theme="dark"] a.parametreHoraire__lienTiroir.lienOuvrirTiroir.voirPlus {
+  background-image: url(https://static.wixstatic.com/media/08b457_46c1bcd45f20445187e80f159587bbf0~mv2.png) !important;
+}
+
+div div section {
+  border-radius: 15px !important;
+}
+
+body[data-theme="dark"] div div section {
+  background-color: rgb(30, 30, 30) !important;
+}
+
+section div h2 {
+  font-family: 'Rubik', sans-serif !important;
+  font-weight: bold !important;
+  padding-left: 5px !important;
+}
+
+section div p {
+  padding-left: 5px !important;
+  font-family: 'Rubik', sans-serif !important;
+}
+
+li div a {
+  border-radius: 15px !important;
+}
+
+div.tuile.avecImage {
+  border-radius: 15px !important;
+}
+
+section div ul {
+  padding-left: 25px !important;
+  font-family: 'Rubik', sans-serif  !important;
+}
+
+div.zoneImageLien {
+  visibility: hidden !important;
+}
+
+p.assistance::before {
+  visibility: hidden !important;
+}
+
+p.assistance {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+span.image {
+  box-sizing: 15px !important;
+  height: 80px !important;
+  background-size: 55px !important;
+}
+
+span.texte {
+  top: 75% !important;
+}
+
+a.langue {
+  border-radius: 6px !important;
+  font-family: 'Rubik', sans-serif !important;
+  visibility: hidden !important;
+}
+
+div div button {
+  outline-width: 0px !important;
+}
+
+div.smpGroupeDonnees.smpBlanc {
+  border-radius: 8px !important;
+  border-width: 3px !important;
+  margin-right: 5px !important;
+  transition: background-color 0.3s ease-in-out !important;
+}
+
+body[data-theme="dark"] div.smpGroupeDonnees.smpBlanc {
+  background-color: transparent !important;
+}
+
+div.detailCours__titre {
+  border-style: none !important;
+}
+
+div.detailCours__section--block {
+  margin-top: -15px !important;
+  display: flex !important;
+}
+
+#mozaikPrincipal {
+  margin-top: auto !important;
+}
+
+div button span {
+  font-family: 'Rubik', sans-serif !important;
+  transition: transform 0.15s !important;
+}
+
+body[data-theme="dark"] div button span {
+  font-family: 'Rubik', sans-serif !important;
+  transition: transform 0.15s !important;
+  color: white !important;
+}
+
+ul li button {
+  font-family: 'Rubik', sans-serif !important;
+  text-align: center !important;
+}
+
+div.detailContenu {
+  font-family: 'Rubik', sans-serif !important;
+  border-radius: 15px !important;
+}
+
+body[data-theme="dark"] div.detailContenu {
+  background-color: rgb(30, 30, 30) !important;
+}
+
+div nav p {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+li div h3 {
+  font-family: 'Rubik', sans-serif !important;
+  display: none !important;
+}
+
+body[data-theme="dark"] li div h3 {
+  color: white !important;
+}
+
+[data-control="outilOnglets"] nav {
+  background-color: transparent !important;
+}
+
+div#contenu {
+  border-radius: 15px !important;
+  border-color: transparent !important;
+  position: relative !important;
+  top: -30px !important;
+  margin-bottom: -55px !important;
+}
+
+#contenu {
+  border-color: transparent !important;
+  border-radius: 15px !important;
+}
+
+#mozaikRetourEnHaut {
+  border-radius: 12px !important;
+  outline-width: 0px !important;
+  margin-bottom: -20px !important;
+}
+
+a.activiteCalendrier.activiteCalendrier--journee.activiteCalendrier--retard {
+  border-radius: 5px !important;
+  background-color: rgb(250, 250, 250) !important;
+}
+
+body[data-theme="dark"] a.activiteCalendrier.activiteCalendrier--journee.activiteCalendrier--retard {
+  background-color: rgb(60, 60, 60) !important;
+  color: white !important;
+}
+
+div.smpTraitementEnCours.normal {
+  border-radius: 15px !important;
+}
+
+body[data-theme="dark"] div.smpTraitementEnCours.normal {
+  background-color: rgb(30, 30, 30) !important;
+}
+
+body:not(.accueil) > div > header + div > .contenu {
+  background-color: transparent !important;
+
+}
+
+div.d-conteneur {
+  background-color: transparent !important;
+}
+
+[data-composante="structurePage"] .mozaikPiedPageApp {
+  background-color: transparent !important;
+}
+
+[data-control="outilOnglets"] nav {
+  padding-right: 18px !important;
+}
+
+li.resultatsEtape__uneEtape.boite.boite--sansTitre {
+  border-radius: 15px !important;
+  border-top-width: 1px !important;
+  padding: 5px !important;
+}
+
+li.resultatsTravaux__unTravail.boite.boite--sansTitre {
+  border-radius: 15px !important;
+  border-top-width: 1px !important;
+  padding: 0px !important;
+}
+body[data-theme="dark"] li.resultatsTravaux__unTravail.boite.boite--sansTitre {
+  border-color: rgb(125, 125, 125) !important;
+}
+div.zoomContenu.actif {
+  border-radius: 15px !important;
+  visibility: hidden !important;
+}
+
+table.grilleHoraire__grille {
+  border-radius: 15px !important;
+  margin-left: 0px !important;
+}
+
+div.grilleHoraire__contenu {
+  padding: 0px !important;
+}
+
+th.date--grille.grilleHoraire--aujourdhui.grilleHoraire--finDeSemaine {
+  border-radius: 1px !important;
+}
+
+
+
+button.btn3.mini.datePicker__boutonOuvrir {
+  visibility: hidden !important;
+}
+
+th.est-cacherPourAccessibilite {
+  background-color: #0073cf !important;
+}
+
+td.grilleHoraire__heures.est-cacherPourAccessibilite {
+  background-color: #0073cf !important;
+  border-width: 0 !important;
+}
+
+body[data-theme="dark"] td.grilleHoraire__heures.est-cacherPourAccessibilite {
+  background-color: rgb(60, 60, 60) !important;
+}
+
+td.grilleHoraire__heures.grilleHoraire__heures--plageParHeure {
+  background-color: #0073cf !important;
+   border-width: 0 !important;
+   vertical-align: middle !important;
+}
+
+body[data-theme="dark"] td.grilleHoraire__heures.grilleHoraire__heures--plageParHeure {
+  background-color: rgb(60, 60, 60) !important;
+}
+
+.voirPlus {
+  font-family: 'Rubik', sans-serif !important;
+  border-style: solid !important;
+  border-radius: 12px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  background-color: rgb(0, 115, 207) !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-width: 0 !important;
+}
+
+button.resultatsTravaux_etapesSectionOuvrable.voirPlus::after {
+  background-color: white !important;
+  border-radius: 50px !important;
+  padding-left: 3px !important;
+  padding-top: 1px !important;
+  margin-left: 10px !important;
+}
+
+body[data-theme="dark"] button.resultatsTravaux_etapesSectionOuvrable.voirPlus {
+  color: white !important;
+}
+
+h4.resultatsTravaux__etapeCourante {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+body[data-theme="dark"] h4.resultatsTravaux__etapeCourante {
+  color: white !important;
+}
+
+h4.resultatsTravaux__etapeAnterieure {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+body[data-theme="dark"] h4.resultatsTravaux__etapeAnterieure {
+  color: white !important;
+}
+
+span.detailCours__nomSection.resultatEtape {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+div a span {
+  font-family: 'Rubik', sans-serif !important;
+  font-weight: normal !important;
+}
+
+h3.panneauVoirTout__titre {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+body[data-theme="dark"] h3.panneauVoirTout__titre {
+  color: white !important;
+}
+
+div div span {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+div div h2 {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+body[data-theme="dark"] div div h2 {
+  color: white !important;
+}
+
+h3.profilScolaire__titre {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+body[data-theme="dark"] h3.profilScolaire__titre {
+  color: white !important;
+}
+
+dl dd a {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+[data-espace-travail="selection"] .tuile a .navigationNouvelOnglet .imageLien {
+  padding-top: 5px !important;
+  padding-right: 5px !important;
+}
+
+.publicationEleve {
+  border-radius: 10px !important;
+  outline-width: 0px !important;
+  padding-bottom: 15px !important;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out, height 0.5s ease-out, background-color 0.3s ease-in-out !important;
+  animation: glissement2 0.35s ease-out forwards !important;
+  background-color: rgb(235, 235, 235) !important;
+  z-index: 50 !important;
+
+}
+
+.publicationEleve__date {
+  animation: glissement2 0.4s ease-out forwards !important;
+}
+
+body[data-theme="dark"] div.publicationEleve {
+  background-color: rgb(60, 60, 60) !important;
+}
+
+body[data-theme="dark"] a.activiteCalendrier.activiteCalendrier--retard {
+  border-radius: 5px !important;
+  background-color: rgb(60, 60, 60) !important;
+}
+
+h4.zoomGrilleHoraire__titre {
+  font-family: 'Rubik', sans-serif !important;
+  font-weight: normal !important;
+}
+
+body[data-theme="dark"] h4.zoomGrilleHoraire__titre {
+  color: white !important;
+}
+
+div.smpGroupeDonneesV2.smpBlanc.parametreHoraire__debutFin {
+  border-radius: 8px !important;
+  padding-left: 34px !important;
+  padding-right: 34px !important;
+}
+
+body[data-theme="dark"] div.smpGroupeDonneesV2.smpBlanc.parametreHoraire__debutFin {
+  background-color: rgb(60, 60, 60) !important;
+  color: white !important;
+}
+
+.dossierEleveAssiduiteStatistique__legende tbody th [data-type-assiduite="motivee"]:before, .dossierEleveAssiduiteStatistique__legende tbody th [data-type-assiduite="motivee"]:after {
+  border-radius: 15px !important;
+}
+
+.dossierEleveAssiduiteStatistique__legende tbody th [data-type-assiduite="non_motivee"]:before, .dossierEleveAssiduiteStatistique__legende tbody th [data-type-assiduite="non_motivee"]:after {
+  border-radius: 15px !important;
+}
+
+.dossierEleveAssiduiteStatistique__legende tbody th [data-type-assiduite="absence"]:before {
+  border-radius: 15px !important;
+  position: absolute !important;
+   top: 18px !important;
+   left: 8px !important;
+}
+
+.dossierEleveAssiduiteStatistique__legende tbody th [data-type-assiduite="absence"]:after {
+  border-radius: 15px !important;
+  position: absolute !important;
+  top: 3px !important;
+  left: 14px !important;
+}
+
+.dossierEleveAssiduiteStatistique__legende tbody th [data-type-assiduite="retard"]:before, .dossierEleveAssiduiteStatistique__legende tbody th [data-type-assiduite="retard"]:after {
+  border-radius: 15px !important;
+}
+
+div.historiqueAssiduite__uneAbsence.boite {
+  border-radius: 15px !important;
+  animation: glissement2 0.35s ease-out forwards !important;
+}
+
+div.boite__titre {
+  border-radius: 10px !important;
+  padding-left: 12px !important;
+  margin-left: 8px !important;
+  margin-right: 8px !important;
+  margin-top: 8px !important;
+}
+
+body[data-theme="dark"] div.boite__titre {
+  background-color: rgb(60, 60, 60) !important;
+}
+
+div.historiqueAssiduite__matiereCouleur {
+  border-radius: 5px !important;
+}
+
+h3.panneau__titre {
+  font-family: 'Rubik', sans-serif !important;
+  vertical-align: 7px !important;
+}
+
+body[data-theme="dark"] h3.panneau__titre {
+  color: white !important;
+}
+
+div.infoPonctuelle.infoPonctuelle--ouvertes {
+  transition: transform 0.1s linear, max-height 0.2s ease-in-out 0.2s !important;
+  border-radius: 15px  !important;
+  background-color: white !important;
+  margin-top: 50px !important;
+  max-width: 255px !important;
+}
+
+body[data-theme="dark"] div.infoPonctuelle.infoPonctuelle--ouvertes {
+  background-color: rgb(60,60,60) !important;
+}
+
+.displayContenu {
+  animation-name: displayAnimation !important;
+  animation-duration:0.2s !important;
+  animation-iteration-count: 1 !important;
+  animation-timing-function:linear !important;
+  animation-fill-mode: none !important;
+}
+
+a:focus, button:focus {
+  outline-width: 0px !important;
+}
+
+ul.derniersResultats__travaux:active {
+   --filter: blur(0px) !important;
+   --transition: filter 0s !important;
+}
+
+ul.derniersResultats__travaux {
+  --filter: blur(5px) !important;
+  --transition: filter 999999s !important;
+    --cursor: pointer !important;
+}
+
+.infoPonctuelle {
+  transition: none !important;
+}
+
+[data-control="outilOnglets"].menuEleve li.menuEleve__Item--4 {
+  -display: inline-table !important;
+}
+
+p.copyright::before {
+content: "Interface Redisign by Willixau |" !important;
+}
+
+div.tiroir.paletteDeCouleur__contenu {
+  border-radius: 15px !important;
+  border-width: 4px !important;
+  border-color: rgb(200, 200, 200) !important;
+  transition: background-color 0.2s ease !important;
+  margin-top: 5px !important;
+}
+
+body[data-theme="dark"] div.tiroir.paletteDeCouleur__contenu {
+  background-color: rgb(30, 30, 30) !important;
+}
+
+div.tiroir.paletteDeCouleur__contenu::before {
+  content: "Choisissez une couleur" !important;
+  color: black !important;
+  font-family: 'Rubik', sans-serif !important;
+  padding: 2px !important;
+  position: absolute !important;
+}
+
+body[data-theme="dark"] div.tiroir.paletteDeCouleur__contenu::before {
+  color: white !important;
+}
+button.paletteDeCouleur__item {
+  border-radius: 12px !important;
+  transition: border-radius 0.2s !important;
+}
+
+button.paletteDeCouleur__item:hover {
+  border-radius: 25px !important;
+}
+
+.paletteCouleur__bouton {
+  border-radius: 17px !important;
+  transition: border-radius 0.1s, opacity 0.1s !important;
+}
+
+.paletteCouleur__bouton:hover {
+  transform: scale(1, 1) !important;
+  border-radius: 12px !important;
+  opacity: 0.9 !important;
+}
+
+button.paletteCouleur__bouton {
+  background-image: url(https://static.wixstatic.com/media/08b457_f7db53651bcc476f8281aa4b993b019a~mv2.png) !important;
+  background-position-x: 8px !important;
+  background-position-y: 8px !important;
+  transition: all 0.3s !important;
+}
+
+span.mesBulletins__titre {
+  border-radius: 10px !important;
+  margin-left: -2.1px !important;
+  background-color: transparent !important;
+}
+
+body[data-theme="dark"] span.mesBulletins__titre {
+  color: white !important;
+}
+
+body[data-theme="dark"] span.mesBulletins__titre {
+  background-color: transparent !important;
+}
+
+div div h3 {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+div.mesTravaux__message {
+  font-weight: normal !important;
+  padding-left: 15px !important;
+}
+
+div.blocAssiduite {
+  font-weight: normal !important;
+  border-width: 0px !important;
+  padding-top: 2px !important;
+}
+
+div.publicationEleve__texte {
+  font-weight: normal !important;
+}
+
+tr td span {
+  font-weight: normal !important;
+}
+
+p.activiteCalendrier__description {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+body[data-theme="dark"]  p.activiteCalendrier__description {
+  font-family: 'Rubik', sans-serif !important;
+  color: white !important;
+}
+
+p.evenementCalendrier__description {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+li.ressources__liste__listeRessources__ressource.div.lienExterne {
+  border-radius: 15px !important;
+}
+
+a div img {
+  border-radius: 3px !important;
+}
+
+div.listeCours {
+  animation: glissement 0.4s ease-out !important;
+  margin-top: -13px !important;
+  background-color: rgb(250,250,250) !important;
+  border-radius: 15px !important;
+  padding-left: 10px !important;
+  margin-right: -11px !important;
+  margin-left: -11px !important;
+  padding-bottom: 15px !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+body[data-theme="dark"] div.listeCours {
+  background-color: rgb(30, 30, 30) !important;
+}
+
+div.ressources {
+  animation: glissement 0.4s ease-out !important;
+  margin-top: -13px !important;
+  background-color: rgb(250,250,250) !important;
+  border-radius: 15px !important;
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+  padding-left: 5px !important;
+  transition: all 0.3s ease-in-out !important;
+  max-height: 620px !important;
+  min-height: 620px !important;
+  overflow-y: auto !important;
+  scroll-behavior: smooth !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(10, 10, 10, 0.5) transparent !important;
+}
+
+body[data-theme="dark"] div.ressources {
+  background-color: rgb(30,30,30) !important;
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent !important;
+}
+
+/* div.detail__resTrav {
+  animation: glissement2 0.45s ease-out
+}*/
+
+.panneau.actif {
+  scroll-behavior: smooth !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(10, 10, 10, 0.5) transparent !important;
+  --min-height: 190px !important;
+}
+
+body[data-theme="dark"] div.panneau.actif {
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent !important;
+}
+
+div.profil {
+  border-radius: 15px !important;
+  position: absolute !important;
+  z-index: 1000 !important;
+  inset-inline: 0 !important;
+  --height: auto !important;
+  margin: 0px !important;
+  border-width: 3px !important;
+  border-style: solid !important;
+  border-color: rgb(120, 120, 120) !important;
+  --animation: glissement2 0.3s ease-out forwards !important;
+  vertical-align: middle !important;
+  box-shadow: 0px 25px 050px rgba(0, 0, 0, 0.5) !important;
+}
+
+div.profil::backdrop {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(5px) !important;
+}
+
+body[data-theme="dark"] div.profil {
+  background-color: rgb(30, 30, 30) !important;
+}
+
+
+div.conteneurBtnFermerBas {
+  visibility: hidden !important;
+}
+
+div.grilleHoraire{
+  border-radius: 15px !important;
+
+}
+div.monHoraire {
+  border-radius: 15px !important;
+  --max-height: 620px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  scroll-behavior: smooth !important;
+  scrollbar-width: thin !important;
+}
+
+nav.navigationHoraire{
+  border-radius: 15px !important;
+}
+div#grilleHoraireId_mp14544{
+  border-radius: 15px !important;
+
+}
+
+li#btn-profil-willixau.menuEleve__Item--4{
+  font-size: 1.5em !important;
+  border-radius: 15px !important;
+  border-style: solid !important;
+  border-width: 5px !important;
+  padding: 5px !important;
+  margin-right: -220px !important;
+  margin-top: 10px !important;
+  color: rgb(30, 30, 30) !important;
+}
+
+div.detailLateral.grilleHoraire__detaukKaterak,grilleHoraire__detailLateral--journee {
+  border-radius: 15px !important;
+}
+
+div.detail {
+  --animation: glissement 0.3s ease-out !important;
+  overflow: hidden !important;
+  justify-content: center !important;
+}
+
+button.precedentSuivant__suivant--leger {
+  border-style: solid !important;
+  border-radius: 10px !important;
+  background-color: rgb(0, 115, 207) !important;
+  padding-left: 10px !important;
+  height: 35px !important;
+  width: 35px !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+  border-width: 0 !important;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-radius 0.3s ease !important;
+  opacity: 1 !important;
+}
+
+button.precedentSuivant__suivant--leger:hover {
+  background-color: rgb(0, 75, 207) !important;
+  border-radius: 6px !important;
+}
+
+dl.profilScolaire__informations {
+  filter: blur(8px) !important;
+  transition: filter 999999s !important;
+}
+
+dl.profilScolaire__informations:hover {
+  cursor: pointer !important;
+}
+
+dl.profilScolaire__informations:active {
+  filter: blur(0px) !important;
+   transition: filter 0s !important;
+   cursor: auto !important;
+}
+
+.tuile--transport {
+  background-image:url(https://static.wixstatic.com/media/08b457_53a7d35a99604714a83f93687e6adcd3~mv2.png) !important;
+}
+
+body[data-theme="dark"] .tuile--transport {
+  background-image:url(https://static.wixstatic.com/media/08b457_c78b8944c24140e1be6c33cb7e17a5aa~mv2.png) !important;
+}
+
+.tuile--resultats {
+  background-image:url(https://static.wixstatic.com/media/08b457_92e251eb2ae44b7f9d22a1d2e035a334~mv2.png) !important;
+}
+
+div.btn-entete-corbeille {
+  padding-left: 15px !important;
+  padding-top: 2px !important;
+  margin-top: -6.5px !important;
+  transition: background-color 0.3s ease-in-out, opacity 0.2s !important;
+  opacity: 0.5 !important;
+}
+
+body[data-theme="dark"] .tuile--resultats {
+  background-image:url(https://static.wixstatic.com/media/08b457_04bf04b95e6045bfa63c942287853d73~mv2.png) !important;
+}
+
+span.tuile__description {
+  color: rgb(55, 66, 74) !important;
+}
+
+body[data-theme="dark"] span.tuile__description {
+  color: white !important;
+}
+
+div.infoPonctuelle__detail {
+  border-radius: 15px !important;
+}
+
+body[data-theme="dark"] div.infoPonctuelle__detail {
+  background-color: rgb(60, 60, 60) !important;
+}
+
+div.infoPonctuelle__titre {
+  border-radius: 8px !important;
+  margin-left: 5px !important;
+  margin-top: 5px !important;
+  margin-right: 5px !important;
+  padding-left: 8px !important;
+  user-select: none !important;
+}
+
+button.btnFermer.petit {
+  margin-right: 7px !important;
+  margin-top: 5.5px !important;
+  transition: transform 0.15s ease-in-out !important;
+}
+a.detail__voirTout.ouverturePleinePage::after {
+background-image: url(https://static.wixstatic.com/media/08b457_b003a7335eac4db3bd0faf03bf6c64fb~mv2.png) !important;
+visibility: hidden !important;
+display: none !important;
+}
+
+a.ouverturePleinePage {
+  border-style: solid !important;
+  border-radius: 12px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  background-color: rgb(0, 115, 207) !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-width: 0 !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-radius 0.3s ease !important;
+}
+
+a.ouverturePleinePage:hover {
+  background-color: rgb(0, 75, 207) !important;
+  border-radius: 8px !important;
+}
+
+a.ouverturePleinePage.monHoraire__navigation__voirModeSemaine::after {
+  visibility: hidden !important;
+  display: none !important;
+}
+
+a.ouverturePleinePage::after {
+  visibility: hidden !important;
+  display: none !important;
+}
+
+button.tiroirFermer.smpBtnFermer.petit {
+  margin-top: 4px !important;
+  margin-right: 4px !important;
+}
+
+body[data-theme="dark"] div.mozaikBanniere {
+  background-color: rgb(30, 30, 30) !important;
+}
+
+body[data-theme="dark"] div.panneau {
+  --background-color: rgb(30, 30, 30) !important;
+}
+
+body[data-theme="dark"] div.resultat {
+  color: white !important;
+}
+
+body[data-theme="dark"] div.unResultatTravail__matiereTravail.donnee {
+  color: white !important;
+}
+
+body[data-theme="dark"] div.unResultatTravail__info_contenu {
+  color: white !important;
+}
+
+body[data-theme="dark"] label.libelle--deuxPoints {
+  color: white !important;
+}
+
+a.detail__voirTout.ouverturePleinePage {
+  margin-top: 10px !important;
+}
+
+body[data-theme="dark"] div div pre {
+  color: white !important;
+}
+
+body[data-theme="dark"] div p label {
+  color: white !important;
+}
+
+body[data-theme="dark"] p.activiteCalendrier__description.activiteCalendrier__description--journee {
+  background-color: rgb(60, 60, 60) !important;
+  color: white !important;
+}
+
+body[data-theme="dark"] th.date--grille.date--grille--dateLongue {
+  background-color: rgb(30, 30, 30) !important;
+  color: white !important;
+}
+
+th.date--grille.date--grille--dateLongue {
+ background-color: rgb(250, 250, 250) !important;
+ color: rgb(30, 30, 30) !important;
+ transition: all 0.3s ease-in-out !important;
+}
+
+thead.grilleHoraire__entete.grilleHoraire__entete--journee {
+  border-color: transparent !important;
+  background-color:transparent !important;
+}
+
+body[data-theme="dark"] div.donnee {
+  color: white !important;
+}
+
+body[data-theme="dark"] div.profilScolaire {
+  background-color: rgb(30, 30, 30) !important;
+  border-color: rgb(125, 125, 125) !important;
+}
+
+[data-modele="modeleProfilScolaire"] .profilScolaire {
+  margin: 20px 0 30px 1% !important;
+}
+
+body[data-theme="dark"] div dl dt {
+  color: white !important;
+}
+
+body[data-theme="dark"] div dl dd {
+  color: white !important;
+}
+
+body[data-theme="dark"] dl dt label {
+  color: white !important;
+}
+
+body[data-theme="dark"] div.zoomGrilleHoraire {
+  background-color: rgb(60, 60, 60) !important;
+  color: white !important;
+  border-color: rgb(120, 120, 120) !important;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 10px 25px !important;
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent !important;
+}
+
+div.zoomGrilleHoraire {
+  border-radius: 15px !important;
+  background-color: rgb(255, 255, 255) !important;
+  border: 3px #dedede solid !important;
+  border-style:solid !important;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px !important;
+  max-height: 225px !important;
+  overflow-y: auto !important;
+  scroll-behavior: smooth !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(10, 10, 10, 0.5) transparent !important;
+  margin-left: 2px !important;
+  margin-right: 2px !important;
+}
+
+div.detailLateral.detailLateral--ouvert.grilleHoraire__detailLateral.grilleHoraire__detailLateral--journee {
+  border-radius: 20px !important;
+  background-color: transparent !important;
+
+}
+
+img.activiteCalendrier__indicateurActiviteEvaluee.activiteCalendrier__indicateurActiviteEvaluee--journee {
+  margin-bottom: 10px !important;
+}
+
+body[data-theme="dark"] a.panneauVoirTout__retour.panneau__retour.panneau__retour--reduit {
+  color: white !important;
+}
+
+body[data-theme="dark"] a.fermerPanneauHistoriqueAssiduite.panneau__retour {
+  color: white !important;
+}
+
+body[data-theme="dark"] p.planPreventif__aucunPlan__texte {
+  color: white !important;
+}
+
+body[data-theme="dark"] a.fermerPanneauPlanPreventifEleve.panneau__retour {
+  color: white !important;
+}
+
+body[data-theme="dark"] a.fermerPanneauVoirToutTravaux.panneau__retour {
+  color: white !important;
+}
+
+body[data-theme="dark"] td.grilleHoraire__case {
+  color: rgb(125, 125, 125) !important;
+}
+
+body[data-theme="dark"] a.fermerPanneauHoraireHebdo.panneau__retour {
+  color: white !important;
+}
+
+body[data-theme="dark"] .panneau__retour::before {
+   opacity: 0.8 !important;
+}
+
+body[data-theme="dark"] div.mozaikPiedPageApp {
+  background-color: rgb(90, 90, 90) !important;
+}
+
+body[data-theme="dark"] p.evidence.zoneTresPeuEspacee {
+  color: white !important;
+}
+
+p.activiteCalendrier__description.activiteCalendrier__description--journee {
+  color: rgb(60, 60, 60) !important;
+  animation: glissement 0.4s ease-out forwards !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+body[data-theme="dark"] div.publicationEleve__groupeDestinataire {
+  color: rgb(220, 220, 220) !important;
+
+}
+
+button.precedentSuivant__precedent--leger {
+  border-style: solid !important;
+  border-width: 0 !important;
+  background-color: rgb(0, 115, 207) !important;
+  border-radius: 10px !important;
+  padding-right: 8px !important;
+  width: 35px !important;
+  height: 35px !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-radius 0.3s ease !important;
+  opacity: 1 !important;
+}
+
+button.precedentSuivant__precedent--leger:hover {
+  background-color: rgb(0, 75, 207) !important;
+  border-radius: 6px !important;
+
+}
+
+body > [data-composante="structurePage"] {
+  background-image: url(https://www.baltana.com/files/wallpapers-10/Light-Silver-Abstract-Wallpaper-28470.jpg) !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+body[data-theme="dark"] > [data-composante="structurePage"] {
+  background-image: url(https://static.wixstatic.com/media/08b457_869f9a40af8341dfbe93ec019c0a311f~mv2.jpg) !important;
+}
+
+.sectionMesBulletins--reduit {
+  max-height: 400px !important;
+  overflow-y: auto !important;
+  scroll-behavior: smooth !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(10, 10, 10, 0.5) transparent !important;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+body[data-theme="dark"] .sectionMesBulletins--reduit {
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent !important;
+}
+
+button.precedentSuivant__suivant--leger::after {
+  margin-left: 3px !important;
+}
+
+button.precedentSuivant__precedent--leger::after {
+  margin-right: 3px !important;
+}
+
+.navigationHoraire--jour {
+  position:static !important;
+  text-align: center !important;
+}
+
+body[data-theme="dark"] div.datePicker__popup {
+  background-color: rgb(60, 60, 60) !important;
+  color: white !important;
+  border-color: rgb(120, 120, 120) !important;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 10px 25px !important;
+}
+
+[data-control="datePicker"] .datePicker__popup {
+  border-radius: 15px !important;
+  background-color: rgb(255, 255, 255) !important;
+  border: 3px #dedede solid !important;
+  border-style:solid !important;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 25px !important;
+}
+
+span.jourNonSelectionnable {
+  color: rgb(125, 125, 125) !important;
+}
+
+.dateTempsPicker .dateTempsPicker__date {
+  --color: white !important;
+  border-style: solid !important;
+  border-radius: 12px !important;
+  padding-bottom: 0px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  background-color: rgb(0, 115, 207) !important;
+  text-decoration: none !important;
+  border-width: 0 !important;
+}
+.dateTempsPicker .dateTempsPicker__date:hover {
+  background-color: rgb(0, 75, 207) !important;
+}
+
+body[data-theme="dark"] .dossierEleveAssiduiteStatistique__dateDebut {
+color: white !important;
+}
+
+body[data-theme="dark"] .publicationEleve__expediteur {
+  color: white !important;
+}
+
+body[data-theme="dark"] [data-jour-affiche-mode-journee="3"] .grilleHoraire__entete--journee th:nth-child(5), [data-jour-affiche-mode-journee="3"] .grilleHoraire__case--journee:nth-child(5) {
+  color: white !important;
+}
+
+.smpTraitementEnCours {
+   padding-left: -50px !important;
+}
+
+#contenu > .smpTraitementEnCours {
+   padding: 100px !important;
+   font-size: 0 !important;
+   background-image: url(https://static.wixstatic.com/media/08b457_3a96c3d284db473ea1657b1d183b44fc~mv2.gif) !important;
+   background-repeat: no-repeat !important;
+   background-size: 80px !important;
+   vertical-align: middle !important;
+   background-position: center !important;
+}
+
+body[data-theme="dark"] div.mesTravaux__message {
+  color: rgb(220, 220, 220) !important;
+}
+
+body[data-theme="dark"] div.transport__message {
+  color: white !important;
+}
+
+body[data-theme="dark"] div.sectionResultatsMinisteriels {
+  color: white !important;
+}
+
+.assistance::before {
+  background-size: 0 !important;
+  display: none !important;
+}
+
+body[data-theme="dark"] a.sectionResultatsMinisteriels__lienResultatsMinisteriels {
+  color: white !important;
+}
+
+body[data-theme="dark"] a.telechargementDocument {
+  color: white !important;
+}
+
+body[data-theme="dark"] li a span {
+  color: white !important;
+}
+
+body[data-theme="dark"] span.courriel {
+  color: white !important;
+}
+
+body[data-theme="dark"] span.smpTexteSecondaire {
+  color: white !important;
+}
+
+a.activiteCalendrier.activiteCalendrier--retard {
+  border-radius: 5px !important;
+  transition: background-color 0.3s ease-in-out, transform 0.08s ease-in-out !important;
+}
+
+body[data-theme="dark"] td.grilleHoraire__case {
+  border-color: rgb(90, 90, 90) !important;
+}
+
+body[data-theme="dark"] div.horaireCyclique {
+  border-color: rgb(90, 90, 90) !important;
+}
+
+body[data-theme="dark"] div label span {
+  background-color: transparent !important;
+  color: rgb(200, 200, 200) !important;
+}
+
+body[data-theme="dark"] button.btn2 {
+  background-color: rgb(60, 60, 60) !important;
+}
+
+body[data-theme="dark"] button.listeDeroulanteSelection {
+  background-color: rgb(90, 90, 90) !important;
+  color: white !important;
+}
+
+div.parametreHoraire__donnee.parametreHoraire__donneeFin {
+  margin-left: 6px !important;
+  margin-top: 10px !important;
+}
+
+span.note.resultat-avec-cote {
+  color: transparent !important;
+}
+/* CHECK POUR LE SPOILER AVEC LE 100% */
+span.note.resultat-avec-cote ::after {
+  content: "100%" !important;
+  color: #0A68F5 !important;
+
+}
+
+body[data-theme="dark"] .unResultatTravail__titreTravail span {
+  color: white !important;
+}
+
+body[data-theme="dark"] span.panneauVoirTout__matiere {
+  color: rgb(200, 200, 200) !important;
+}
+
+body[data-theme="dark"] div.assistance {
+  color: rgb(200, 200, 200) !important;
+}
+
+body[data-theme="dark"] p span span {
+  color: rgb(200, 200, 200) !important;
+}
+
+body[data-theme="dark"] ul.listeDeChoix {
+  background-color: rgb(30, 30, 30) !important;
+}
+
+ul.listeDeChoix {
+  font-family: 'Rubik', sans-serif !important;
+  background-color: rgb(240, 240, 240) !important;
+}
+
+[data-control="outilSelecteurTemps"] [data-control="outilListeDeroulante"] .listeDeChoix li {
+  border-radius: 10px !important;
+}
+
+div.detailLateral.detailLateral--ouvert.grilleHoraire__detailLateral.grilleHoraire__detailLateral--semaine {
+  background-color: transparent;
+  border-radius: 15px !important;
+  position: absolute !important;
+}
+
+body[data-theme="dark"] div.adresse {
+  color: rgb(200, 200, 200) !important;
+}
+
+[data-composante="structurePage"] .mozaikPiedPage {
+  height: 100px !important;
+}
+
+p.copyright {
+  --margin-top: -55px !important;
+}
+
+p.signature {
+  margin-top: -55px !important;
+}
+
+div.travail__ident {
+  border-radius: 5px !important;
+
+}
+
+body[data-theme="dark"] p.travail__titre {
+  color: rgb(255, 255, 255) !important;
+}
+
+body {
+    padding-bottom: 100px !important;
+}
+
+/* PC */
+li.menuEleve__Item--4.actif {
+  border-radius: 15px !important;
+  font-style: normal !important;
+  border-style: solid !important;
+  text-align: left !important;
+  border-color: transparent !important;
+  border-width: 4px !important;
+  margin-right: -198px !important;
+  margin-left: 10px !important;
+  margin-top: 10px !important;
+  background-color: rgb(205, 205, 205) !important;
+
+}
+body[data-theme="dark"] li.menuEleve__Item--4.actif {
+  background-color: rgb(30, 30, 30) !important;
+}
+
+body[data-theme="dark"] li.menuEleve__Item--4:hover {
+  background-color: rgb(30, 30, 30) !important;
+}
+
+li.menuEleve__Item--4 {
+  border-radius: 15px !important;
+  border-style: solid !important;
+  border-width: 5px !important;
+  padding: 6px !important;
+  margin-right: -198px !important;
+  margin-left: 8px !important;
+  margin-top: 10px !important;
+}
+
+.menuEleve, nav, button, a {
+    user-select: none !important;
+    -webkit-user-select: none !important;
+}
+
+li.menuEleve__Item--4:hover {
+  border-radius: 15px !important;
+  border-style: solid !important;
+  background-color: rgb(205, 205, 205) !important;
+  /*border-width: 4px;*/
+  transition: background-color 0.2s !important;
+
+}
+/* Mode Tablette */
+/*div.menuEleve, [data-control="outilOnglets"] nav, div nav ul {
+    position:fixed !important;
+    top: auto !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 30px !important;
+    margin: 0 !important;
+    border-radius: 20px 20px 0px 0px !important;
+    z-index: 1000 !important;
+    display: flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    padding-bottom: 70px !important;
+    padding-top: 30px !important;
+    margin-left: 0px !important;
+    padding-right: 0px !important;
+}*/
+
+/* =========================================================
+   MODE PC : BARRE LATÉRALE EXTENSIBLE
+   ========================================================= */
+
+/* Le @media est OBLIGATOIRE pour protéger le mode mobile ! */
+@media screen and (min-width: 1150px) {
+  li.listeCours__item.actif {
+  max-width: 275px !important;
+}
+
+li.listeCours__item {
+  max-width: 265px !important;
+}
+
+li.listeCours__item::before {
+    filter: brightness(0.50) invert(0.25) !important;
+    transition: all 0.4s !important;
+}
+
+li.listeCours__item.actif::before {
+    filter: brightness(1) invert(0) !important;
+    transition: all 0.4s !important;
+}
+
+div.horaireCyclique {
+  padding-left: 15px !important;
+}
+
+div.listeCours {
+  max-height: 620px !important;
+  min-height: 620px !important;
+}
+
+body[data-theme="dark"] li.listeCours__item::before {
+    filter: brightness(0.50) invert(0.75);
+    transition: all 0.4s !important;
+}
+
+body[data-theme="dark"] li.listeCours__item.actif::before {
+    filter: brightness(1) invert(0) !important;
+    transition: all 0.4s !important;
+}
+
+a.coursItem__description {
+  max-width: 280px !important;
+  transition: background-color 0.3s ease-in-out !important;
+}
+
+.listeCours #panneauListe {
+  margin-bottom: 0px !important;
+  padding-bottom: 600px !important;
+  margin-right: 8px !important; /* PC */
+  width: 288px !important;
+  height: 1vh !important;
+  display: flex !important;
+  transition: background-color 0.3s ease-in-out !important;
+}
+
+div.historiqueAssiduite__uneAbsence.boite {
+  margin-left: 15px !important;
+}
+
+#panneauVoirTout.panneau.actif {
+  max-height: 608px !important;
+  min-height: 608px !important;
+}
+
+.listeCours__liste {
+  margin-left: 4px !important;
+  margin-right: 10px !important;
+  max-height: 100% !important;
+}
+
+.sectionMesBulletins--reduit {
+  max-height: 400px !important;
+  overflow-y: auto !important;
+  scroll-behavior: smooth !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(10, 10, 10, 0.5) transparent !important;
+  margin-right: -4px !important;
+  padding-left: 6px !important;
+}
+
+.panneau.actif {
+  vertical-align:middle !important;
+}
+
+    /* 1. LA BARRE DE BASE (Fermée) */
+    div.menuEleve, [data-control="outilOnglets"] nav, div nav ul {
+        position: fixed !important;
+        top: 0px !important;
+        bottom: auto !important;
+        left: 0px !important;
+        height: 100vh !important;
+        width: 80px !important;
+        border-radius: 0px 20px 20px 0px !important;
+        z-index: 1000 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        padding-left: 15px !important;
+        padding-right: 0px !important;
+        -margin: 0 !important;
+        overflow: hidden !important;
+        transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), padding-right 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease-in-out !important;
+    }
+
+    /* 2. LA BARRE AU SURVOL (Ouverte) */
+    div.menuEleve:hover, [data-control="outilOnglets"] nav:hover, div nav ul:hover {
+        width: 250px !important;
+        padding-right: 20px !important;
+        box-shadow: 5px 0px 15px rgba(0,0,0,0.5) !important;
+    }
+
+    /* 3. CORRECTION DE LA BOÎTE (État fermé) */
+    li.menuEleve__Item--4, li.menuEleve__Item--4.actif {
+        margin: 10px 0px !important;
+        width: 70% !important;
+        box-sizing: border-box !important;
+        transition: width 0.4s ease !important;
+
+    }
+
+    /* BOÎTE ÉTENDUE (Quand la barre est survolée) */
+    div.menuEleve:hover li.menuEleve__Item--4,
+    [data-control="outilOnglets"] nav:hover li.menuEleve__Item--4,
+    div nav ul:hover li.menuEleve__Item--4 {
+        width: 100% !important;
+
+    }
+
+    /* 4. ANIMATION DU TEXTE EN FONDU */
+    h2.menuEleve__titre--texte, li.menuEleve__Item--4 span {
+        opacity: 0 !important; /* Invisible au départ */
+        white-space: nowrap !important;
+        margin-left: 25px !important;
+        display: inline-block !important; /* Force l'affichage si le mobile l'a caché */
+        transition: opacity 0.2s ease !important;
+    }
+
+    /* Le texte apparait quand on survole la barre */
+    div.menuEleve:hover h2.menuEleve__titre--texte,
+    [data-control="outilOnglets"] nav:hover h2.menuEleve__titre--texte,
+    div nav ul:hover h2.menuEleve__titre--texte,
+    div.menuEleve:hover li.menuEleve__Item--4 span {
+        opacity: 1 !important;
+        transition: opacity 0.4s ease 0.1s !important; /* Petit délai stylé */
+    }
+
+    /* 5. ON DÉCALE LE RESTE DU SITE POUR LE PC */
+    body {
+        padding-bottom: 0px !important; /* Annule l'espace de la barre mobile */
+    }
+
+    div nav ul {
+  background-image: url(https://static.wixstatic.com/media/08b457_8f67c8b69d144bc395cccef1b81c2aa5~mv2.png) !important;
+  background-repeat: no-repeat !important;
+  background-position-x: 30px !important;
+  background-position-y: 20px !important;
+}
+
+/* Animation (désactiver mobile)  */
+body[data-theme="dark"] div nav ul {
+  background-image: url(https://static.wixstatic.com/media/08b457_cfe79e5c70cb45b58634b83291736fd8~mv2.png) !important;
+}
+
+div nav ul::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: inherit !important;
+  background-image: url(https://static.wixstatic.com/media/08b457_75b7fe076a2e45e5922592679535c0ea~mv2.png) !important;
+  background-repeat: no-repeat !important;
+  background-position-x: 30px !important;
+  background-position-y: 20px !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease 0.0s !important;
+  pointer-events: none !important; /* Empêche ce calque invisible de bloquer les clics sur tes boutons */
+}
+
+/* SURVOL SOMBRE - Pseudo-élément */
+body[data-theme="dark"] div nav ul::before {
+  background-image: url(https://static.wixstatic.com/media/08b457_d30223d01c944d318e6c0eb7be174a00~mv2.png) !important;
+}
+
+/* 3. L'ANIMATION : Quand on survole la boîte, on rend le calque du dessus visible */
+div nav ul:hover::before {
+  opacity: 1 !important;
+}
+
+/* Fin Animation  */
+
+span.espaceTravail {
+  top: 3px !important;
+  bottom: 0px !important; /* Désactive le mode mobile */
+  left: 770px !important;
+  width: 80px !important; /* On remet une taille normale au lieu de 10px */
+}
+}
+
+body[data-theme="dark"] div nav ul {
+  background-color: #121212 !important;
+  box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+div nav ul {
+  background-color: rgb(230,230,230) !important;
+  visibility: visible !important;
+}
+
+li.menuEleve__Item--4 {
+    /* border-width: 0px !important; */
+    border-color: transparent !important;
+    background: transparent !important;
+    -transform: scale(0.9) !important;
+}
+
+div.mozaikPiedPage {
+  padding-bottom: 10px !important;
+}
+
+svg g path {
+  visibility: hidden !important;
+}
+
+/* Ma Vie Scolaire */
+[data-control="outilOnglets"].menuEleve [data-valeur="maVieScolaire"] {
+  background-image:url(https://static.wixstatic.com/media/08b457_4a3be08f25e14e439c07a38fb4b5a99e~mv2.png) !important;
+  background-repeat: no-repeat !important;
+  display: flex !important;
+  background-size: 25px !important;
+  background-origin:content-box !important;
+  padding-left: 10px !important;
+  background-position-y: 4px !important;
+  background-position-x: 1px !important;
+  transition: background-color 0.3s ease-in-out !important;
+}
+
+body[data-theme="dark"] [data-control="outilOnglets"].menuEleve [data-valeur="maVieScolaire"] {
+  background-image:url(https://static.wixstatic.com/media/08b457_5b28e515c3c24c83b9bdc19d750bf5f4~mv2.png) !important;
+}
+
+[data-control="outilOnglets"].menuEleve [data-valeur="maVieScolaire"].actif {
+  background-image:url(https://static.wixstatic.com/media/08b457_5bae48cd485d421aaad6fbbeb8ba8e04~mv2.png) !important;
+  background-repeat: no-repeat !important;
+  display: flex !important;
+  background-size: 25px !important;
+  background-origin: content-box !important;
+  padding-left: 10px !important;
+  background-position-y: 4px !important;
+  background-position-x: 1px !important;
+
+}
+
+span.espaceTravail {
+    position: fixed !important;
+    top: 32px !important;
+    left: 80px !important;
+    font-family: 'Rubik', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    letter-spacing: 1.5px !important;
+    z-index: 10000 !important;
+    display: block !important;
+    visibility: visible !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    white-space: nowrap !important;
+    width: 80px !important;
+    transition: opacity 0.2s ease !important;
+}
+
+body[data-theme="dark"] [data-control="outilOnglets"].menuEleve [data-valeur="maVieScolaire"].actif {
+  background-image:url(https://static.wixstatic.com/media/08b457_b2896de45b624e67acd91db48acb2bbd~mv2.png) !important;
+}
+
+/* Mes Cours */
+[data-control="outilOnglets"].menuEleve [data-valeur="mesCours"] {
+  background-image:url(https://static.wixstatic.com/media/08b457_9bba696f03f84b418f515d5a3222015b~mv2.png) !important;
+  background-repeat: no-repeat !important;
+  display: flex !important;
+  background-size: 25px !important;
+  background-origin:content-box !important;
+  padding-left: 10px !important;
+  background-position-y: 4px !important;
+  background-position-x: 1px !important;
+  transition: background-color 0.3s ease-in-out !important;
+}
+
+body[data-theme="dark"] [data-control="outilOnglets"].menuEleve [data-valeur="mesCours"] {
+  background-image:url(https://static.wixstatic.com/media/08b457_6ea727e2990842c08aa8ffbaf26d53c7~mv2.png) !important;
+}
+
+[data-control="outilOnglets"].menuEleve [data-valeur="mesCours"].actif {
+  background-image:url(https://static.wixstatic.com/media/08b457_c268f5bb96724ccf81e78b1e8cd5571d~mv2.png) !important;
+  background-repeat: no-repeat !important;
+  display: flex !important;
+  background-size: 25px !important;
+  background-origin:content-box !important;
+  padding-left: 10px !important;
+  background-position-y: 4px !important;
+  background-position-x: 1px !important;
+}
+
+body[data-theme="dark"] [data-control="outilOnglets"].menuEleve [data-valeur="mesCours"].actif {
+  background-image:url(https://static.wixstatic.com/media/08b457_09d3bedfb9a440dcb02e5837614a3966~mv2.png) !important;
+}
+
+/* Ressources */
+[data-control="outilOnglets"].menuEleve [data-valeur="mesRessources"] {
+  background-image:url(https://static.wixstatic.com/media/08b457_c5d1eca7a0a2495e9e377fbd3d06d21c~mv2.png) !important;
+  background-repeat: no-repeat !important;
+  display: flex !important;
+  background-size: 25px !important;
+  background-origin:content-box !important;
+  padding-left: 10px !important;
+  background-position-y: 4px !important;
+  background-position-x: 1px !important;
+  transition: background-color 0.3s ease-in-out !important;
+}
+
+body[data-theme="dark"] [data-control="outilOnglets"].menuEleve [data-valeur="mesRessources"] {
+  background-image:url(https://static.wixstatic.com/media/08b457_225a6c703c184ff59d11e87105262710~mv2.png) !important;
+}
+
+[data-control="outilOnglets"].menuEleve [data-valeur="mesRessources"].actif {
+  background-image:url(https://static.wixstatic.com/media/08b457_fad98f9e31b24af2b3454fbaaafb620a~mv2.png) !important;
+  background-repeat: no-repeat !important;
+  display: flex !important;
+  background-size: 25px !important;
+  background-origin:content-box !important;
+  padding-left: 10px !important;
+  background-position-y: 4px !important;
+  background-position-x: 1px !important;
+}
+
+body[data-theme="dark"] [data-control="outilOnglets"].menuEleve [data-valeur="mesRessources"].actif {
+  background-image:url(https://static.wixstatic.com/media/08b457_1dea321c3b2849fea000468fe6f40d10~mv2.png) !important;
+}
+
+/* = Tablette - Portrait */
+@media only screen and (min-width: 600px) and (max-width: 1149px),only screen and (max-device-width : 1024px) and (orientation : portrait) {
+   .contenu {width: 600px;}
+   h2.menuEleve__titre--texte {
+  display: none !important;
+}
+
+div.menuEleve__titre--icone {
+  padding: 5px !important;
+}
+
+[data-control="outilOnglets"].menuEleve [data-valeur="maVieScolaire"] {
+  background-size: 35px !important;
+}
+[data-control="outilOnglets"].menuEleve [data-valeur="maVieScolaire"].actif {
+  background-size: 35px !important;
+}
+[data-control="outilOnglets"].menuEleve [data-valeur="mesCours"] {
+  background-size: 35px !important;
+}
+[data-control="outilOnglets"].menuEleve [data-valeur="mesCours"].actif {
+  background-size: 35px !important;
+}
+[data-control="outilOnglets"].menuEleve [data-valeur="mesRessources"] {
+  background-size: 35px !important;
+}
+[data-control="outilOnglets"].menuEleve [data-valeur="mesRessources"].actif {
+  background-size: 35px !important;
+}
+div.menuEleve {
+  animation: glissement2 0.5s ease-out forwards !important;
+}
+
+li.listeCours__item::before {
+  width: 15% !important;
+}
+
+@media only screen and (min-width: 940px) and (max-width: 1149px) {
+
+div.menuEleve__titre--icone {
+  padding: 10.5px !important;
+}
+
+@media only screen and (min-width: 940px) and (max-width: 972px) {
+  div.menuEleve__titre--icone {
+  padding: 10.5px !important;
+}
+}
+
+.maVieScolaire__vue .detail {
+  display: block !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.maVieScolaire__vue .detail__horaire, .maVieScolaire__vue .detail__message, .maVieScolaire__vue .detail__resultat, .maVieScolaire__vue .detail__travailSemaine {
+  width: 100% !important;
+}
+
+.maVieScolaire__vue .detail > div + div {
+  margin-left: 0 !important;
+}
+
+#panneauTableauBord .mesTravaux__contenu {
+  max-width: 500px !important;
+}
+
+.mesTravaux__contenu .navigation .navigationHoraire .precedentSuivant__precedent--plein {
+  padding-right: 10px !important;
+}
+
+.precedentSuivant__precedent--plein + .precedentSuivant__suivant--plein {
+  padding-right: 8px !important;
+}
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1149px) {
+
+.listeCours #panneauListe {
+  margin-bottom: 0px !important;
+  padding-bottom: 600px !important;
+  height: 9vh !important;
+  display: flex !important;
+  transition: background-color 0.3s ease-in-out !important;
+  width: 230px !important;
+}
+
+.precedentSuivant__precedent--plein + .precedentSuivant__suivant--plein {
+  padding-right: 8px !important;
+  margin-left: 5px !important;
+}
+
+.boite {
+  width: 302px !important;
+}
+
+.detailCours__titre .detailCours__matiere {
+  margin-right: 47px !important;
+}
+
+.panneauVoirTout__entete .panneauVoirTout__titres {
+  width: 260 !important;
+}
+
+.mesTravaux__contenu .navigation .navigationHoraire .date .annee {
+  display: none !important;
+}
+
+.mesTravaux__contenu .navigation .navigationHoraire .date .mois span::after {
+  font-size: 16px !important;
+  content: "." !important;
+}
+
+.mesTravaux__contenu .navigation .navigationHoraire .date .mois span {
+  font-size: 0 !important;
+  overflow: hidden !important;
+}
+
+.detailCours__titre {
+  width: 319px !important;
+}
+
+.mesTravaux__contenu .navigation .navigationHoraire .navigationHoraire__datePicker--semaine {
+  position: absolute !important;
+  right: 2px !important;
+}
+
+.mesTravaux__contenu .navigation .navigationHoraire .navigationHoraire__semaineAffichee.date--range {
+  margin-left: 5px !important;
+  font-size: inherit !important;
+}
+
+.paletteCouleur__bouton {
+  background-size: 18px !important;
+  padding-bottom: 2px !important;
+}
+
+.derniersResultats .derniersResultats__travaux .derniersResultats__unTravail{
+  width: 304px !important;
+}
+
+.listeCours #panneauDetail, .listeCours #panneauVoirTout {
+  width: 319px !important;
+}
+
+.detailCours > .detailCours__section .detailCours__sectionDetail {
+  width: 304px !important;
+}
+
+.detailCours__section--block > div {
+  width: auto !important;
+}
+
+.coursItem__description {
+  font-size: 0.8em !important;
+  line-height: 2.7 !important;
+}
+
+.listeCours__item {
+  width: 230px !important;
+}
+
+li.listeCours__item::before {
+    filter: brightness(0.50) invert(0.25) !important;
+    transition: all 0.4s !important;
+}
+
+li.listeCours__item.actif::before {
+    filter: brightness(1) invert(0) !important;
+    transition: all 0.4s !important;
+}
+
+li.listeCours__item {
+  max-width: 265px !important;
+}
+
+li.listeCours__item.actif {
+  max-width: 275px !important;
+}
+
+#panneauVoirTout.panneau.actif {
+  max-height: 608px !important;
+  min-height: 608px !important;
+}
+
+div.listeCours {
+  max-height: 700px !important;
+  min-height: 700px !important;
+}
+}
+
+div.menuEleve, [data-control="outilOnglets"] nav, div nav ul {
+    position:fixed !important;
+    top: auto !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 30px !important;
+    margin: 0 !important;
+    border-radius: 20px 20px 0px 0px !important;
+    z-index: 1000 !important;
+    display: flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    padding-bottom: 70px !important;
+    padding-top: 30px !important;
+    margin-left: 0px !important;
+    margin-right: -8px !important;
+    padding-right: 0px !important;
+    margin-top: 10px !important;
+}
+div nav ul {
+  background-image: none !important;
+}
+
+body[data-theme="dark"] div nav ul {
+  background-image: none !important;
+}
+li.menuEleve__Item--4.actif {
+  border-radius: 15px !important;
+  font-style: normal !important;
+  border-style: solid !important;
+  text-align: left !important;
+  border-color: transparent !important;
+  border-width: 3px !important;
+  margin-right: -8px !important;
+  margin-left: 22px !important;
+  margin-top: 10px !important;
+  background-color: rgb(205, 205, 205) !important;
+  transition: background-color 0.5s ease !important;
+}
+li.menuEleve__Item--4 {
+  border-radius: 15px !important;
+  border-style: solid !important;
+  border-width: 5px !important;
+  -padding: 5px !important;
+  margin-right: -10px !important;
+  margin-left: 20px !important;
+}
+li#btn-profil-willixau.menuEleve__Item--4{
+  font-size: 0 !important;
+  border-radius: 15px !important;
+  border-style: solid !important;
+  border-width: 10px !important;
+  -padding: 0px !important;
+  margin-right: 24px !important;
+  margin-top: 10px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding-right: 5px !important;
+  padding-left: 0px !important;
+
+}
+span.espaceTravail {
+    position: fixed !important;
+    top: 598px !important;
+    left: 15px !important;
+    font-family: 'Rubik', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    letter-spacing: 1.5px !important;
+    z-index: 10000 !important;
+    display: block !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    white-space: nowrap !important;
+    width: 80px !important;
+    transition: opacity 0.2s ease !important;
+    visibility: hidden !important;
+}
+#mozaikRetourEnHaut {
+  margin-bottom: 80px !important;
+}
+div.mozaikPiedPage {
+  padding-bottom: 70px !important;
+  margin-bottom: 70px !important;
+  height: 60px !Important;
+  --background-color: transparent !important;
+  --color: rgb(30, 30, 30) !important;
+}
+div.mozaikPiedPageApp {
+  padding-bottom: 5px !important;
+  margin-bottom: -75px !important;
+  --height: 120px !important;
+  background-color: transparent !important;
+  display: none !important;
+}
+
+[data-composante="structurePage"] .mozaikPiedPage {
+  --color: rgb(30, 30, 30) !important;
+}
+
+body[data-theme="dark"] div.mozaikPiedPageApp {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+body > [data-composante="structurePage"]{
+  background-image: none !important;
+  background-color: rgb(250, 250, 250) !important;
+  transition: background-color 0.3s ease-in-out !important;
+}
+
+body[data-theme="dark"] > [data-composante="structurePage"] {
+  background-image: none !important;
+  background-color: rgb(30, 30, 30) !important;
+  transition: background-color 0.3s ease-in-out !important;
+}
+div.detail__horaire {
+  border-width: 0 !important;
+}
+
+div.profil {
+  border-radius: 15px !important;
+  margin-top: 10px !important;
+  margin-bottom: 30px !important;
+  border-width: 3px !important;
+  border-style: solid !important;
+  border-color: rgb(120, 120, 120) !important;
+}
+.paletteCouleur__bouton {
+  height: 34px !important;
+  width: 34px !important;
+  background-size: 18px;
+}
+li.resultatsEtape__uneEtape.boite.boite--sansTitre {
+  padding: 0 !important;
+}
+}
+
+/* = Mobile - Paysage */
+@media only screen and (min-width:500px) and (max-width: 599px), only screen and (max-device-width : 480px) and (orientation : landscape) {
+   .contenu {width: 500px !important;}
+   div.menuEleve, [data-control="outilOnglets"] nav, div nav ul {
+    position:fixed !important;
+    top: auto !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 30px !important;
+    margin: 0 !important;
+    border-radius: 20px 20px 0px 0px !important;
+    z-index: 1000 !important;
+    display: flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    padding-bottom: 70px !important;
+    padding-top: 30px !important;
+    margin-left: 0px !important;
+    margin-right: -8px !important;
+    padding-right: 0px !important;
+    margin-top: 10px !important;
+}
+}
+
+
+
+
+/* = Mobile - Portrait */
+@media only screen and (max-width: 499px), only screen and (max-device-width : 480px) and (orientation : portrait) {
+   html, body {min-width: 320px;}
+   .contenu {width: 310px !important;}
+   h2.menuEleve__titre--texte {
+  display: none !important;
+}
+div.menuEleve__titre--icone {
+  padding: 5px !important;
+}
+[data-control="outilOnglets"].menuEleve [data-valeur="maVieScolaire"] {
+  background-size: 35px !important;
+}
+[data-control="outilOnglets"].menuEleve [data-valeur="maVieScolaire"].actif {
+  background-size: 35px !important;
+}
+[data-control="outilOnglets"].menuEleve [data-valeur="mesCours"] {
+  background-size: 35px !important;
+}
+[data-control="outilOnglets"].menuEleve [data-valeur="mesCours"].actif {
+  background-size: 35px !important;
+}
+[data-control="outilOnglets"].menuEleve [data-valeur="mesRessources"] {
+  background-size: 35px !important;
+}
+[data-control="outilOnglets"].menuEleve [data-valeur="mesRessources"].actif {
+  background-size: 35px !important;
+}
+div.menuEleve {
+  animation: glissement2 0.5s ease-out forwards !important;
+}
+div.menuEleve, [data-control="outilOnglets"] nav, div nav ul {
+    position:fixed !important;
+    top: auto !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 30px !important;
+    margin: 0 !important;
+    border-radius: 20px 20px 0px 0px !important;
+    z-index: 1000 !important;
+    display: flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    padding-bottom: 70px !important;
+    padding-top: 30px !important;
+    margin-left: 0px !important;
+    margin-right: -8px !important;
+    padding-right: 0px !important;
+    margin-top: 10px !important;
+}
+
+div nav ul {
+  background-image: none !important;
+}
+
+body[data-theme="dark"] div nav ul {
+  background-image: none !important;
+}
+
+li.menuEleve__Item--4.actif {
+  border-radius: 15px !important;
+  font-style: normal !important;
+  border-style: solid !important;
+  text-align: left !important;
+  border-color: transparent !important;
+  border-width: 3px !important;
+  margin-right: -8px !important;
+  margin-left: 22px !important;
+  margin-top: 10px !important;
+  background-color: rgb(205, 205, 205) !important;
+  transition: background-color 0.5s ease !important;
+
+}
+li.menuEleve__Item--4 {
+  border-radius: 15px !important;
+  border-style: solid !important;
+  border-width: 5px !important;
+  -padding: 5px !important;
+  margin-right: -10px !important;
+  margin-left: 20px !important;
+}
+li#btn-profil-willixau.menuEleve__Item--4{
+  font-size: 0 !important;
+  border-radius: 15px !important;
+  border-style: solid !important;
+  border-width: 10px !important;
+  -padding: 0px !important;
+  margin-right: 24px !important;
+  margin-top: 10px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding-right: 5px !important;
+  padding-left: 0px !important;
+}
+span.espaceTravail {
+    position: fixed !important;
+    top: 598px !important;
+    left: 15px !important;
+    font-family: 'Rubik', sans-serif !important;
+    font-size: 13px !important;
+    visibility: hidden !important;
+    font-weight: bold !important;
+    letter-spacing: 1.5px !important;
+    z-index: 10000 !important;
+    display: block !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    white-space: nowrap !important;
+    width: 80px !important;
+    transition: opacity 0.2s ease !important;
+}
+body > [data-composante="structurePage"]{
+  background-image: none !important;
+  background-color: rgb(250, 250, 250) !important;
+}
+
+body[data-theme="dark"] > [data-composante="structurePage"] {
+  background-image: none !important;
+  background-color: rgb(30, 30, 30) !important;
+}
+div.detail__horaire {
+  border-width: 0 !important;
+}
+
+div.profil {
+  border-radius: 15px !important;
+  margin-top: 10px !important;
+  margin-bottom: 30px !important;
+  border-width: 3px !important;
+  border-style: solid !important;
+  border-color: rgb(120, 120, 120) !important;
+}
+.paletteCouleur__bouton {
+  height: 34px !important;
+  width: 34px !important;
+  background-size: 18px;
+}
+li.resultatsEtape__uneEtape.boite.boite--sansTitre {
+  padding: 0 !important;
+}
+}
+
+
+/* = Mobile - Peu importe l'orientation */
+@media only screen and (max-width:599px), only screen and (max-device-width : 480px) {
+  h2.menuEleve__titre--texte {
+  display: none !important;
+}
+div.menuEleve__titre--icone {
+  padding: 5px !important;
+}
+
+div.menuEleve {
+  animation: glissement2 0.5s ease-out forwards !important;
+}
+
+.mesBulletins__item > div.document {
+  border-color: rgb(200, 200, 200) !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-radius: 10px !important;
+  padding: 10px !important;
+}
+
+body[data-theme="dark"] div.document {
+  border-color: white !important;
+}
+
+div.document::before {
+  content: "⚠ Utilisez un navigateur internet ou un ordinateur pour accéder à ce document." !important;
+  font-family: "Rubik" !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+}
+
+.telechargementDocument {
+  --display: none !important;
+  margin-top: 10px !important;
+}
+
+[data-control="outilOnglets"].menuEleve [data-valeur="maVieScolaire"] {
+  background-size: 35px !important;
+}
+[data-control="outilOnglets"].menuEleve [data-valeur="maVieScolaire"].actif {
+  background-size: 35px !important;
+}
+[data-control="outilOnglets"].menuEleve [data-valeur="mesCours"] {
+  background-size: 35px !important;
+}
+[data-control="outilOnglets"].menuEleve [data-valeur="mesCours"].actif {
+  background-size: 35px !important;
+}
+[data-control="outilOnglets"].menuEleve [data-valeur="mesRessources"] {
+  background-size: 35px !important;
+}
+[data-control="outilOnglets"].menuEleve [data-valeur="mesRessources"].actif {
+  background-size: 35px !important;
+}
+div.menuEleve, [data-control="outilOnglets"] nav, div nav ul {
+    position:fixed !important;
+    top: auto !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 30px !important;
+    margin: 0 !important;
+    border-radius: 20px 20px 0px 0px !important;
+    z-index: 1000 !important;
+    display: flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    padding-bottom: 70px !important;
+    padding-top: 30px !important;
+    margin-left: 0px !important;
+    margin-right: -8px !important;
+    padding-right: 0px !important;
+    margin-top: 10px !important;
+}
+
+div nav ul {
+  background-image: none !important;
+}
+
+body[data-theme="dark"] div nav ul {
+  background-image: none !important;
+}
+
+li.menuEleve__Item--4.actif {
+  border-radius: 15px !important;
+  font-style: normal !important;
+  border-style: solid !important;
+  text-align: left !important;
+  border-color: transparent !important;
+  border-width: 3px !important;
+  margin-right: -8px !important;
+  margin-left: 22px !important;
+  margin-top: 10px !important;
+  background-color: rgb(205, 205, 205) !important;
+  transition: background-color 0.5s ease !important;
+
+}
+li.menuEleve__Item--4 {
+  border-radius: 15px !important;
+  border-style: solid !important;
+  border-width: 5px !important;
+  -padding: 5px !important;
+  margin-right: -10px !important;
+  margin-left: 20px !important;
+}
+
+li#btn-profil-willixau.menuEleve__Item--4{
+  font-size: 0 !important;
+  border-radius: 15px !important;
+  border-style: solid !important;
+  border-width: 10px !important;
+  -padding: 0px !important;
+  margin-right: 24px !important;
+  margin-top: 10px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding-right: 5px !important;
+  padding-left: 0px !important;
+}
+span.espaceTravail {
+    position: fixed !important;
+    top: 598px !important;
+    left: 15px !important;
+    font-family: 'Rubik', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    letter-spacing: 1.5px !important;
+    z-index: 10000 !important;
+    display: block !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    white-space: nowrap !important;
+    width: 80px !important;
+    transition: opacity 0.2s ease !important;
+    visibility: hidden !important;
+}
+body > [data-composante="structurePage"]{
+  background-image: none !important;
+  background-color: rgb(250, 250, 250) !important;
+}
+
+body[data-theme="dark"] > [data-composante="structurePage"] {
+  background-image: none !important;
+  background-color: rgb(30, 30, 30) !important;
+}
+div.detail__horaire {
+  border-width: 0 !important;
+}
+
+div.profil {
+  border-radius: 15px !important;
+  margin-top: 10px !important;
+  margin-bottom: 30px !important;
+  border-width: 3px !important;
+  border-style: solid !important;
+  border-color: rgb(120, 120, 120) !important;
+}
+.paletteCouleur__bouton {
+  height: 34px !important;
+  width: 34px !important;
+  background-size: 18px !important;
+}
+li.resultatsEtape__uneEtape.boite.boite--sansTitre {
+  padding: 0 !important;
+}
+}
+
+li div svg {
+  visibility: hidden !important;
+}
+
+span.logo.mozaikPortail {
+  visibility: hidden !important;
+}
+
+body[data-theme="dark"] a.detailCours__bouton.panneau__retour.panneau__retour--reduit {
+  color: white !important;
+}
+
+body:has(div.menuEleve:hover) span.espaceTravail,
+    body:has([data-control="outilOnglets"] nav:hover) span.espaceTravail,
+    body:has(div nav ul:hover) span.espaceTravail {
+        opacity: 1 !important;
+        transition: opacity 0.4s ease 0.1s !important;
+    }
+
+div.mozaikBanniere {
+  background-color: transparent !important;
+}
+
+body:has(p.evidence.zoneTresPeuEspacee:hover) p.evidence.zoneTresPeuEspacee,
+    body:has([data-control="outilOnglets"] nav:hover) p.evidence.zoneTresPeuEspacee,
+    body:has(div nav ul:hover) p.evidence.zoneTresPeuEspacee {
+        opacity: 1 !important;
+        transition: opacity 0.4s ease 0.1s !important;
+    }
+
+body[data-theme="dark"] div.mozaikBanniere {
+  background-color: transparent !important;
+}
+
+.message-apres-chargement--centre {
+  font-family: 'Rubik', sans-serif !important;
+  --padding-top: 50px !important;
+}
+
+[data-composante="utilisateur"] .menu.actif > ul {
+  position: fixed !important;
+  display:flexbox !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: fit-content !important;
+  width:fit-content !important;
+  top: 40vh !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 50vw !important;
+  border-radius: 15px !important;
+  -webkit-user-select: none !important;
+}
+
+[data-composante="utilisateur"] .menu > ul {
+  position:fixed !important;
+  display:flexbox !important;
+  justify-content: center !important;
+  height: fit-content !important;
+  width: fit-content !important;
+  top: 40vh !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 50vw !important;
+  border-radius: 10px !important;
+  -webkit-user-select: none !important;
+}
+
+body[data-theme="dark"] ul.onglets.onglets--minimal.onglets__avecEspacement {
+  background-color: rgb(60, 60, 60) !important;
+}
+
+.onglets.onglets--minimal .onglets__onglet {
+  border-bottom: none !important;
+}
+
+.onglets__titre {
+  transition: all 0.2s !important;
+}
+
+body[data-theme="dark"] span.historiqueAssiduite__motifValeur {
+  color: white !important;
+}
+
+body[data-theme="dark"] span.historiqueAssiduite__periodeDesc {
+  color: rgb(200,200,200) !important;
+}
+
+body[data-theme="dark"] div.dossierEleveAssiduiteStatistique__legendeWrapper {
+  background-color: rgb(30, 30, 30) !important;
+}
+
+body[data-theme="dark"] thead tr th {
+  background-color: rgb(60, 60, 60) !important;
+}
+
+body[data-theme="dark"] tbody tr th {
+  background-color: rgb(60, 60, 60) !important;
+}
+
+body[data-theme="dark"] table.dossierEleveAssiduiteStatistique__legende {
+  background-color: rgb(60, 60, 60) !important;
+}
+
+body[data-theme="dark"] .dossierEleveAssiduiteStatistique__legende td {
+  background-color: rgb(60, 60, 60) !important;
+}
+
+div.panneauVoirTout__entete {
+  border-radius: 4px !important;
+
+}
+
+div.menu {
+  visibility: hidden !important;
+}
+
+#changerSelection {
+  display: none !important;
+}
+
+div.lienExterne__image {
+  border-radius: 5px !important;
+}
+
+li.ressources__liste__regroupement {
+  --display: none !important;
+  margin-bottom: 0px !important;
+}
+
+span.activiteCalendrier__heure.activiteCalendrier__fin.activiteCalendrier__heure--journee.activiteCalendrier__fin--journee {
+  color: rgb(60, 60, 60) !important;
+}
+
+span.activiteCalendrier__heure.activiteCalendrier__debut.activiteCalendrier__heure--journee.activiteCalendrier__debut--journee {
+  color: rgb(60, 60, 60) !important;
+}
+
+body[data-theme="dark"] span.activiteCalendrier__heure.activiteCalendrier__fin.activiteCalendrier__heure--journee.activiteCalendrier__fin--journee {
+  color: rgb(200, 200, 200) !important;
+}
+
+body[data-theme="dark"] span.activiteCalendrier__heure.activiteCalendrier__debut.activiteCalendrier__heure--journee.activiteCalendrier__debut--journee {
+  color: rgb(200, 200, 200) !important;
+}
+
+td.grilleHoraire__case.grilleHoraire__case--journee {
+  border-radius: 8px !important;
+}
+
+tbody.grilleHoraire__plages.grilleHoraire__plages--journee {
+  border-radius: 8px !important;
+}
+
+span.activiteCalendrier__indicateurNoteEleve.activiteCalendrier__indicateurNoteEleve--journee {
+  margin-bottom: 10px !important;
+}
+
+[data-composante="structurePage"] .mozaikBanniere h1 .espaceTravail {
+  color: rgb(30, 30, 30) !important;
+}
+
+body[data-theme="dark"] [data-composante="structurePage"] .mozaikBanniere h1 .espaceTravail {
+  color: rgb(255, 255, 255) !important;
+}
+
+div.message--avecIcone.message-apres-chargement--eleve.message-apres-chargement--centre {
+  --position: absolute !important;
+  top: 25% !important;
+  left: 2% !important;
+}
+
+.message__icone {
+  top: 10px;
+}
+
+body[data-theme="dark"] #OptionsIcon {
+  background-image: url(https://static.wixstatic.com/media/08b457_ea944951ac88496bb1517a4979488772~mv2.png) !important;
+}
+
+#OptionsText {
+  color: rgb(30, 30, 30) !important;
+}
+
+body[data-theme="dark"] #OptionsText {
+  color: rgb(255, 255, 255) !important;
+}
+
+.listeCours #panneauListe {
+  background-color: rgb(250,250,250) !important;
+  overflow-y: auto !important;
+  scroll-behavior: smooth !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(10, 10, 10, 0.5) rgb(250, 250, 250) !important;
+}
+
+body[data-theme="dark"] .listeCours #panneauListe {
+  background-color: rgb(30,30,30) !important;
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent !important;
+}
+
+.panneau {
+  overflow-y: auto !important;
+}
+
+#panneauListe.panneau {
+  padding-right: 12px !important;
+  animation: glissement 0.5s ease-out forwards !important;
+}
+
+#panneauVoirTout.panneau.actif {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(10, 10, 10, 0.5) rgb(250, 250, 250) !important;
+  margin-top: -0px !important;
+}
+
+body[data-theme="dark"] #panneauVoirTout.panneau.actif {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent !important;
+  margin-top: -0px !important;
+}
+
+a.coursItem__description {
+  background-color: rgb(230, 230, 230) !important;
+  padding-right: 5px !important;
+  --padding-left: 50px !important;
+}
+
+#panneauLateral {
+  background-color: rgb(250, 250, 250) !important;
+  border-radius: 15px !important;
+  padding-top: 15px !important;
+  max-height: 670px !important;
+}
+
+body[data-theme="dark"] #panneauLateral {
+  background-color: rgb(30, 30, 30) !important;
+  border-radius: 15px !important;
+  padding-top: 15px !important;
+}
+
+div.dossierEleveAssiduiteStatistique__dateDebut {
+  margin-left: 15px !important;
+}
+
+span.historiqueAssiduite__message {
+  margin-left: 15px !important;
+}
+
+body[data-theme="dark"] span.historiqueAssiduite__message {
+  margin-left: 15px !important;
+  color: white !important;
+}
+
+.historiqueAssiduite {
+  min-height: 554px;
+}
+
+div.smpBarreOutils.toggle {
+  margin-right: 15px !important;
+  border-radius: 15px !important;
+}
+
+a.btn3.mini.modeStatistiques {
+  border-radius: 10px !important;
+}
+
+a.btn3.mini.modeListe {
+  border-radius: 10px !important;
+  margin-left: 8px !important;
+}
+
+ul.onglets.onglets--minimal.onglets__avecEspacement {
+  background-color: rgb(250,250,250) !important;
+  max-width: max-content !important;
+  margin-left: 15px;
+}
+
+div.panneau__entete {
+  padding-left: 15px !important;
+  animation: glissement 0.4s 0.05s ease-out forwards !important;
+  padding-bottom: 5px !important;
+}
+
+td.grilleHoraire__case {
+  border-radius: 5px !important;
+}
+
+[data-control="outilTiroir"].tiroirAnimerOuvrir:not([data-format]) {
+   -moz-animation: tiroirEtendre1 .0s ease-in backwards, tiroirEtendre2 .1s linear .0.5s, tiroirEtendre3 .1s linear .2s, tiroirEtendre4 .1s linear .3s;
+   -o-animation: tiroirEtendre1 .2s ease-in backwards, tiroirEtendre2 .1s linear .0.5s, tiroirEtendre3 .1s linear .2s, tiroirEtendre4 .1s linear .3s;
+   -webkit-animation: tiroirEtendre1 .2s ease-in backwards, tiroirEtendre2 .1s linear .0.5s, tiroirEtendre3 .1s linear .2s, tiroirEtendre4 .1s linear .3s;
+   animation: tiroirEtendre1 .2s ease-in backwards, tiroirEtendre2 .1s linear .0.5s, tiroirEtendre3 .1s linear .2s, tiroirEtendre4 .1s linear .3s;
+}
+
+[data-control="outilTiroir"].tiroirAnimerFermer.reduit:not([data-format]) {
+   -moz-animation: tiroirReduire1 .1s linear, tiroirReduire2 .1s linear .1s, tiroirReduire3 .1s linear .1s, tiroirReduire4 .2s ease-out .1s;
+   -o-animation: tiroirReduire1 .1s linear, tiroirReduire2 .1s linear .1s, tiroirReduire3 .1s linear .1s, tiroirReduire4 .2s ease-out .1s;
+   -webkit-animation: tiroirReduire1 .1s linear, tiroirReduire2 .1s linear .1s, tiroirReduire3 .1s linear .1s, tiroirReduire4 .2s ease-out .1s;
+   animation: tiroirReduire1 .1s linear, tiroirReduire2 .1s linear .1s, tiroirReduire3 .1s linear .1s, tiroirReduire4 .2s ease-out .1s;
+}
+
+.dossierEleveAssiduiteStatistique__legendeWrapper {
+  scroll-behavior: smooth !important;
+  scrollbar-color: rgba(10, 10, 10, 0.5) transparent !important;
+
+}
+
+body[data-theme="dark"] .dossierEleveAssiduiteStatistique__legendeWrapper {
+  scroll-behavior: smooth !important;
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent !important;
+
+}
+
+[data-control="outilListeDeroulante"] > ul, [data-control="outilListeDeroulante"] > .zoneSelection {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+div.detailCours {
+  padding-right: 0px !important;
+  animation: glissement 0.5s ease-out forwards !important;
+}
+
+a.voirPlus {
+  font-family: 'Rubik', sans-serif !important;
+  border-style: solid !important;
+  border-radius: 12px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  background-color: rgb(0, 115, 207) !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-width: 0 !important;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-radius 0.3s ease !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+}
+
+a.voirPlus:hover {
+  background-color: rgb(0, 75, 207) !important;
+  border-radius: 8px !important;
+  opacity: 1 !important;
+}
+
+a.voirPlus::after {
+  background-color: white !important;
+  border-radius: 50px !important;
+  padding-left: 3px !important;
+  padding-top: 1px !important;
+  margin-left: 10px !important;
+}
+
+div.tableau__cellule__contenu.tableau__texteGauche.description {
+  color: black !important;
+}
+
+.tableau.groupe {
+  color: black !important;
+}
+
+div.tableau__cellule__contenu.priorite {
+  color: black !important;
+}
+
+div.tableau__cellule__contenu.tableau__texteGauche {
+  color: black !important;
+}
+
+div.tableau__celluleTitre__contenu {
+  color: black !important;
+}
+
+body[data-theme="dark"] .dossierEleveAssiduiteStatistique__legende {
+  color: white !important;
+}
+
+body[data-theme="dark"] span.resultatsTravaux__message {
+  color: white !important;
+}
+
+body[data-theme="dark"] div div div {
+color: white !important;
+}
+
+.sectionMesBulletins--reduit .mesBulletins_anneeSectionOuvrable.voirPlus::after, .sectionMesBulletins--reduit .mesBulletins_anneeSectionOuvrable.voirPlus.voirPlusOuvert::after {
+  font-family: 'Rubik', sans-serif !important;
+  border-style: solid !important;
+  border-radius: 12px !important;
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+  padding-left: 1px !important;
+  padding-right: 4px !important;
+  background-color: rgb(255, 255, 255) !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-width: 2px !important;
+}
+
+.sectionMesBulletins--reduit .mesBulletins .mesBulletins__annee .voirPlus {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  padding-left: 6px !important;
+  padding-right: 7px !important;
+}
+
+.mesBulletins--anterieurs {
+  text-align: center !important;
+}
+
+.canvasGraphique.bar {
+  max-height: 850px !important;
+}
+
+.graphique {
+  max-height: 850px !important;
+}
+
+body[data-theme="dark"] .dossierEleveAssiduiteStatistique__legende tr {
+  border-bottom: solid #7a7a7a 3px !important;
+
+}
+
+.dossierEleveAssiduiteStatistique__legende tr {
+  border-bottom: solid #f0f0f0 3px !important;
+}
+
+.dossierEleveAssiduiteStatistique__legende tr:last-child:not(:first-child) {
+  border-top: 0px !important;
+}
+
+.dossierEleveAssiduiteStatistique__legende tbody {
+  border: none !important;
+}
+
+.dossierEleveAssiduiteStatistique__legende th:first-child {
+  box-shadow: inset -2px 0 0 0 #f0f0f0, inset 3px 0 0px 0px #f0f0f0 !important;
+}
+
+body[data-theme="dark"] .dossierEleveAssiduiteStatistique__legende th:first-child {
+  box-shadow: inset -2px 0 0 0 #7a7a7a, inset 3px 0 0px 0px #7a7a7a !important;
+}
+
+body[data-theme="dark"] .document__info__paragraphe {
+color: rgb(200, 200, 200) !important;
+}
+
+.horaireImprimable__document {
+  padding-bottom: 15px !important;
+  padding-left: 15px !important;
+}
+
+.dateTempsPicker .dateTempsPicker__date > .dateRelative, .dateTempsPicker .dateTempsPicker__date > .dateDetaillee {
+  color: white !important;
+}
+
+button.resultatsTravaux_etapesSectionOuvrable.voirPlus.voirPlusOuvert {
+  display: none !important;
+}
+
+div.option {
+  user-select: none !important;
+}
+
+/*[data-composante="structurePage"] .mozaikBanniere h1 .appNom::after {
+  content: "Bienvenue William !";
+  color: white;
+  position: absolute;
+  left: 50px;
+} */
+
+[data-composante="structurePage"] .mozaikBanniere h1 .appNom {
+  color: transparent !important;
+  user-select: none !important;
+  display: none !important;
+}
+
+span.noteEntiere {
+  user-select: none !important;
+  --cursor:default !important;
+}
+
+[data-composante="structurePage"][data-modele="complet"] #mozaikPrincipal > .mozaikContenu {
+  background-color: transparent !important;
+}
+
+body[data-theme="dark"] .modalContenu {
+  background-color: rgb(30,30,30) !important;
+}
+
+.btnFermerEnHautADroite {
+  display: none !important;
+}
+
+.modalContenu .modalPied .modalPiedActions {
+  display: flex !important;
+}
+
+/* MOBILE SEULEMENT */
+div.horaireImprimable__document {
+  --filter: blur(5px) !important;
+  padding-right: 15px !important;
+  padding: 0 !important;
+}
+
+div.horaireImprimable__document {
+  --display: none !important;
+}
+
+div.travail--resume {
+  padding-left: 10px !important;
+  animation: glissement2 0.35s ease-out forwards !important;
+}
+
+div.messages__entete {
+  position: sticky !important;
+  top: -10px !important;
+  width: 103.7% !important;
+  border-width: 3px !important;
+  background-color: rgb(250, 250, 250) !important;
+  margin-top: 0px !important;
+  padding-top: 1px !important;
+  margin-left: -10px !important;
+  padding-left: 10px !important;
+  z-index: 10 !important;
+  padding-bottom: 3px !important;
+  transition: background-color 0.3s ease-in-out !important;
+}
+
+body[data-theme="dark"] div.messages__entete {
+  border-color: rgb(125, 125, 125) !important;
+}
+
+body[data-theme="dark"] div.messages__entete {
+  background-color: rgb(30, 30, 30) !important;
+}
+
+#panneauTableauBord.panneau.actif {
+  overflow-y: hidden !important;
+}
+
+.ressources li {
+  animation: glissement 0.5s ease-out forwards !important;
+}
+
+.detail__entete {
+  border-width: 3px !important;
+  width: 103.7% !important;
+  margin-left: -10px !important;
+  padding-left: 10px !important;
+}
+
+body[data-theme="dark"] .detail__entete {
+  border-color: rgb(125, 125, 125) !important;
+}
+
+.voirPlusListeDistant {
+  overflow-y:auto !important;
+  max-height: 552px !important;
+  min-height: 552px !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(10, 10, 10, 0.5) transparent !important;
+  scroll-behavior: smooth !important;
+  margin-right: -8px !important;
+  padding-right: 8px !important;
+}
+
+body[data-theme="dark"] .voirPlusListeDistant {
+  background-color: rgb(30,30,30) !important;
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent !important;
+}
+
+body[data-theme="dark"] div.btn-entete-corbeille {
+  opacity: 0.6 !important;
+}
+
+div.btn-entete-corbeille:hover {
+  opacity: 1 !important;
+}
+
+body[data-theme="dark"] div.btn-entete-corbeille:hover {
+  opacity: 1 !important;
+}
+
+
+.btn-action-msg {
+    margin: 0 !important;           /* On vire les marges forcées */
+    cursor: pointer !important;
+    background: none !important;
+    border: none !important;
+    font-family: 'Rubik', sans-serif !important;
+    border-radius: 6px !important;
+    display: inline-block !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: background-color 0.2s, opacity 0.2s !important;
+    /* On garde tes styles spécifiques ici */
+}
+
+
+button.btn-action-msg.btn-delete {
+  font-family: 'Rubik', sans-serif !important;
+  border-style: solid !important;
+  border-radius: 12px !important;
+  padding-top: 6px !important;
+  padding-bottom: 10px !important;
+  padding-left: 11px !important;
+  padding-right: 12px !important;
+  background-color: rgb(0, 115, 207) !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-width: 0 !important;
+  bottom: 8.5px !important;
+  right: 9px !important;
+  height: 34px !important;
+  transition: transform 0.5s ease, background-color 0.25s ease-in-out !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+}
+button.btn-action-msg.btn-delete:hover {
+  background-color: rgb(200, 0, 65) !important;
+  border-radius: 8px !important;
+}
+
+button.btn-action-msg.btn-restore {
+  font-family: 'Rubik', sans-serif !important;
+  border-style: solid !important;
+  border-radius: 12px !important;
+  padding-top: 6px !important;
+  padding-bottom: 10px !important;
+  padding-left: 11px !important;
+  padding-right: 12px !important;
+  background-color: rgb(0, 115, 207) !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-width: 0 !important;
+  bottom: 8.5px !important;
+  right: 9px !important;
+  height: 34px !important;
+  width: 34px !important;
+  transition: transform 0.2s ease, background-color 0.25s ease-in-out !important;
+  background-image: url(https://static.wixstatic.com/media/08b457_7c3951067fcd4ea6a4a932d72c5e0997~mv2.png) !important;
+  background-size: 22px !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+button.btn-action-msg.btn-restore:hover {
+  background-color: rgb(0, 75, 207) !important;
+  border-radius: 8px !important;
+}
+
+#btn-retour-corbeille {
+    display: none !important;
+    width: 24px !important;
+    height: 24px !important;
+    background-image: url('https://static.wixstatic.com/media/08b457_b8a9e3c1b24b4cc8a856731f64143ffd~mv2.png') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-color: transparent !important;
+    padding-left: 55px !important;
+    border: none !important;
+    cursor: pointer !important;
+    margin-left: auto !important;
+    padding-top: 2px !important;
+    margin-top: -6.5px !important;
+    opacity: 0.6 !important;
+    transition: opacity 0.2s !important;
+}
+
+#btn-retour-corbeille:hover {
+    opacity: 1 !important;
+}
+
+/* Correction pour le mode sombre */
+[data-theme="dark"] #btn-retour-corbeille {
+    background-image: url('https://static.wixstatic.com/media/08b457_26fec12b03494f80b3d0139d6f13ba08~mv2.png') !important;
+}
+
+.detail__message.vue-corbeille #btn-retour-corbeille {
+    display: block !important; /* On remet le bouton visible */
+}
+
+.grilleHoraire__plages--journee {
+  transition: background-color 0.3s ease-in-out !important;
+  max-height: 500px !important;
+}
+
+p.evenementCalendrier__description.evenementCalendrier__description--journee {
+  animation: glissement 0.4s ease-out forwards !important;
+  vertical-align: middle !important;
+}
+
+.grilleHoraire__case.grilleHoraire__case--journee {
+  animation: glissement 0.3s ease-out forwards !important;
+}
+
+body[data-theme="dark"] p.planificationMinimale__note.smpTexteSecondaire.donnee.texteRiche__consultation.briseMot {
+  color: white !important;
+}
+
+span.date {
+  white-space:nowrap !important;
+}
+
+span.note.note-masquee {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+}
+
+.zoomGrilleHoraire__detailActiviteCalendrier--intervenantAvecCourriel, .zoomGrilleHoraire__detailActiviteCalendrier--intervenant {
+  white-space:nowrap !important;
+  text-overflow:ellipsis !important;
+  overflow:auto !important;
+  overflow-y: hidden !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(10, 10, 10, 0.5) transparent !important;
+  scroll-behavior: smooth !important;
+}
+
+body[data-theme="dark"] .zoomGrilleHoraire__detailActiviteCalendrier--intervenantAvecCourriel, .zoomGrilleHoraire__detailActiviteCalendrier--intervenant {
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent !important;
+}
+
+.zoomGrilleHoraire__detailActiviteCalendrier--intervenantAvecCourriel::before, .zoomGrilleHoraire__detailActiviteCalendrier--intervenant::before {
+  position: sticky !important;
+  left: 0px !important;
+  background-color: white !important;
+}
+
+body[data-theme="dark"] .zoomGrilleHoraire__detailActiviteCalendrier--intervenantAvecCourriel::before, .zoomGrilleHoraire__detailActiviteCalendrier--intervenant::before {
+  position: sticky !important;
+  left: 0px !important;
+  background-color: rgb(60, 60, 60) !important;
+}
+
+th.date--grille.date--grille--dateLongue.grilleHoraire--aujourdhui {
+  transition: background-color 0.3s ease-in-out !important;
+}
+
+div.voirPlusListeDistant {
+  transition: background-color 0.3s ease-in-out !important;
+}
+
+.message-placeholder {
+  margin-top: -550px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  animation: glissement2 0.15s ease-out forwards !important;
+  color: rgb(60,60,60) !important;
+}
+
+p.planPreventif__aucunPlan__texte {
+  padding-left: 15px !important;
+}
+
+.caseACocher.petit.apres {
+  display: none !important;
+}
+
+.mesTravaux .travail--resume .travail__journee::after {
+  display: none !important;
+}
+
+body[data-theme="dark"] span.objectif__description {
+  color: white !important;
+}
+
+button.mesBulletins_anneeSectionOuvrable.voirPlus {
+  font-family: 'Rubik', sans-serif !important;
+  border-style: solid !important;
+  border-radius: 12px !important;
+  background-color: rgb(0, 115, 207) !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-width: 0 !important;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-radius 0.3s ease !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+}
+
+button.mesBulletins_anneeSectionOuvrable.voirPlus:hover {
+  background-color: rgb(0, 75, 207) !important;
+  border-radius: 8px !important;
+  opacity: 1 !important;
+}
+
+div.horaireCyclique {
+  padding-bottom: 15px !important;
+}
+
+.iconeRegroupement {
+  transition: all 0.3s !important;
+}
+
+/*div.detailCours__matiere::before {
+  content: "" !important;
+  position: absolute;
+  background-image: url(https://static.wixstatic.com/media/08b457_09d3bedfb9a440dcb02e5837614a3966~mv2.png);
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 12%;
+  background-size: 30px;
+  margin-left: 10px;
+  margin-top: -2px;
+  user-select: none !important;
+  z-index: 0;
+} */
+
+@media only screen and (min-width: 500px) and (max-width: 599px), only screen and (max-device-width: 480px) and (orientation: landscape), only screen and (max-width: 499px), only screen and (max-device-width: 480px) and (orientation: portrait) {
+    .listeCours #panneauListe {
+        margin-right: 0 !important;
+        width: 98% !important;
+    }
+}
+
+#menu-principal-willixau-box {
+  animation: glissement2 0.4s ease-out forwards !important;
+  transition: all 0.2s !important;
+}
+
+div.willixau-dropdown-container {
+  padding-left: 10px !important;
+  width: 100% !important;
+}
+
+div.willixau-modal-box {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  padding-bottom: 8px !important;
+  animation: glissement2 0.3s ease-out forwards !important;
+}
+
+h3.willixau-modal-title {
+  margin-top: -25px !important;
+  user-select: none !important;
+}
+
+button.btn {
+  border-style: solid !important;
+  border-radius: 12px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  background-color: rgb(0, 115, 207) !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-width: 0 !important;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-radius 0.3s ease !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+}
+
+button.btn:hover {
+  background-color: rgb(0, 75, 207) !important;
+  border-radius: 8px !important;
+}
+
+button.btn2 {
+  border-style: solid !important;
+  border-radius: 12px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  background-color: rgb(0, 115, 207) !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-width: 0 !important;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-radius 0.3s ease !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+}
+
+button.btn2:hover {
+  background-color: rgb(0, 75, 207) !important;
+  border-radius: 8px !important;
+}
+
+button.btn:hover::before, a.btn:hover::before, button.btn2:hover::before, a.btn2:hover::before, button.btn3:hover::before, a.btn3.mini:hover::before, button.btn4:hover::before, a.btn4:hover::before, button.btn:hover::after, a.btn:hover::after, button.btn2:hover::after, a.btn2:hover::after, button.btn3:hover::after, a.btn3.mini:hover::after, button.btn4:hover::after, a.btn4:hover::after, button.btn:hover > span, a.btn:hover > span, button.btn2:hover > span, a.btn2:hover > span, button.btn3:hover > span, button.btn4:hover > span, a.btn4:hover > span {
+  transform:none !important;
+}
+
+.overInvisible {
+  border-radius: 12px !important;
+}
+
+button.precedentSuivant__suivant--plein {
+  border-style: solid !important;
+  border-radius: 10px !important;
+  background-color: rgb(0, 115, 207) !important;
+  padding-left: 10px !important;
+  height: 35px !important;
+  width: 35px !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+  border-width: 0 !important;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-radius 0.3s ease !important;
+  opacity: 1 !important;
+  --position: absolute !important;
+}
+
+button.precedentSuivant__suivant--plein:hover {
+  background-color: rgb(0, 75, 207) !important;
+  border-radius: 8px !important;
+}
+
+button.precedentSuivant__suivant--plein::after {
+  border-left-color: white !important;
+  top: 10px !important;
+  left: 75px !important;
+}
+
+button.precedentSuivant__suivant--plein > div.ripple {
+  --position: fixed !important;
+}
+
+button.precedentSuivant__precedent--plein {
+  border-style: solid !important;
+  border-radius: 10px !important;
+  background-color: rgb(0, 115, 207) !important;
+  padding-left: 10px !important;
+  height: 35px !important;
+  width: 35px !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+  border-width: 0 !important;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-radius 0.3s ease !important;
+  opacity: 1 !important;
+}
+
+button.precedentSuivant__precedent--plein:hover {
+  background-color: rgb(0, 75, 207) !important;
+  border-radius: 8px !important;
+}
+
+button.precedentSuivant__precedent--plein::after {
+  border-right-color: white !important;
+}
+
+div.navigationHoraire--semaine.precedentSuivant {
+  padding-left: 10px !important;
+}
+
+body[data-theme="dark"] .ripple {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.coursItem__description.btn-willixau-ripple .ripple {
+  background-color: rgba(80, 80, 80, 0.4) !important;
+}
+
+body[data-theme="dark"] .coursItem__description.btn-willixau-ripple .ripple {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.menuEleve__Item--4.btn-willixau-ripple .ripple {
+  background-color: rgba(80, 80, 80, 0.4) !important;
+}
+
+body[data-theme="dark"] .menuEleve__Item--4.btn-willixau-ripple .ripple {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+button.willixau-bouton-classique.willixau-ripple-applied.btn-willixau-ripple .ripple {
+  background-color: rgba(80, 80, 80, 0.4) !important;
+}
+
+button.back-btn.btn-press.willixau-ripple-applied.btn-willixau-ripple .ripple {
+  background-color: rgba(80, 80, 80, 0.4) !important;
+}
+
+.panneau__retour--reduit.willixau-ripple-applied.btn-willixau-ripple .ripple {
+  background-color: rgba(80, 80, 80, 0.4) !important;
+}
+
+.tuile__corps.icone--autobus.tuile--transport.willixau-ripple-applied.btn-willixau-ripple .ripple {
+  background-color: rgba(80, 80, 80, 0.4) !important;
+}
+
+body[data-theme="dark"] .tuile__corps.icone--autobus.tuile--transport.willixau-ripple-applied.btn-willixau-ripple .ripple {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.tuile__corps.icone--resultat.tuile--resultats.willixau-ripple-applied.btn-willixau-ripple .ripple {
+  background-color: rgba(80, 80, 80, 0.4) !important;
+}
+
+body[data-theme="dark"] .tuile__corps.icone--resultat.tuile--resultats.willixau-ripple-applied.btn-willixau-ripple .ripple {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+body[data-theme="dark"] .panneau__retour--reduit.willixau-ripple-applied.btn-willixau-ripple .ripple {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.panneau__retour.willixau-ripple-applied.btn-willixau-ripple .ripple {
+  background-color: rgba(80, 80, 80, 0.4) !important;
+}
+
+body[data-theme="dark"] .panneau__retour.willixau-ripple-applied.btn-willixau-ripple .ripple {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+div.status-badge {
+  color: white !important;
+}
+
+div.boiteMessageContenu {
+  border-radius: 10px !important;
+  visibility: visible !important;
+  background-color: white;
+  border-width: 3px !important;
+  border-style: solid !important;
+  border-color: rgb(120, 120, 120) !important;
+}
+
+body[data-theme="dark"] div.boiteMessageContenu {
+  background-color: rgb(30, 30, 30) !important;
+}
+
+[data-composante="boiteMessage"][data-type="info"]{
+  border-color: transparent !important;
+  border-width: 0 !important;
+  border-radius: 10px !important;
+  animation: glissement2 0.4s ease-out forwards !important;
+  margin-left: 12px !important;
+  margin-right: 12px !important;
+  background-color: transparent !important;
+}
+
+div.message {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+.mozaikMessage {
+  margin-bottom: 30px !important;
+  margin-top: -30px !important;
+  z-index: 100 !important;
+}
+
+span.icone {
+  border-radius: 5px !important;
+}
+
+.zoneMessage {
+  text-align: center !important;
+}
+
+button.mozaikBtn3.mini.btnFermerMessage {
+  position: absolute !important;
+  right: 5px !important;
+  top: 5px !important;
+  transform: translate(0) !important;
+  background-image: url(../img/fermer-787f84.svg) !important;
+  background-size: 12px !important;
+  height: 30px !important;
+  width: 30px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+
+}
+
+button.mozaikBtn3.mini.btnFermerMessage:hover {
+  transform: scale(0.9) !important;
+  right: 5px !important;
+  top: 5px !important;
+  opacity: .8 !important;
+}
+
+[data-composante="boiteMessage"] .icone + .message {
+  padding-top: 6px !important;
+  padding-right: 30px !important;
+}
+
+[data-composante="boiteMessage"] .mozaikCaseACocher {
+  user-select: none !important;
+}
+
+.mozaikCaseACocher input:focus + label {outline: 0px dotted #37424a;}
+.mozaikCaseACocher .valeur {
+  outline: none !important;
+}
+
+.mozaikBtn.maxi::before, .mozaikBtn2.maxi::before, .mozaikBtn3.maxi::before, .mozaikBtn4.maxi::before, .mozaikBtn.mini::before, .mozaikBtn2.mini::before, .mozaikBtn3.mini::before, .mozaikBtn4.mini::before, .mozaikBtn.maxiImageDroite::after, .mozaikBtn2.maxiImageDroite::after, .mozaikBtn4.maxiImageDroite::after {
+  content: none !important;
+}
+
+[data-composante="structurePage"] .mozaikPiedPage > .mozaikContenu > div > .navigationPiedPage {
+  padding-top: 10px !important;
+}
+
+span.logo {
+  margin-right: -10px !important;
+}
+
+body[data-theme="dark"] [data-composante="afficherMasquer"]:not([data-style^="aide"]):not([data-style-bouton]) > button > span::after, [data-composante="afficherMasquer"]:not([data-style^="aide"])[data-style-bouton="voirPlus"] > button > span::after {
+  filter: brightness(0) invert(1) !important;
+}
+
+body[data-theme="dark"][data-control="outilListeDeroulante"] > ul li:not(.nonSelectionnable):hover, body[data-theme="dark"] [data-control="outilListeDeroulante"] > .zoneSelection li:not(.nonSelectionnable):hover {
+  background-color: rgb(60, 60, 60) !important;
+}
+
+tbody.grilleHoraire__plages.grilleHoraire__plages--journee {
+  max-height: 232px !important;
+  min-height: 10px !important;
+  scroll-behavior:auto !important;
+  display: block !important;
+  overflow-y: auto !important;
+  border-radius: 0 !important;
+  scrollbar-width: thin !important;
+}
+
+.grilleHoraire__case--journee {
+  width: 10% !important;
+  max-width: 200% !important;
+}
+
+.precedentSuivant__invisible {
+  --visibility: visible !important;
+}
+
+body[data-theme="dark"] .dossierEleveAssiduiteStatistique__legende td:last-child, body[data-theme="dark"] .dossierEleveAssiduiteStatistique__legende th:last-child {
+  border: solid gray !important;
+}
+
+.dossierEleveAssiduiteStatistique__legende td:last-child, .dossierEleveAssiduiteStatistique__legende th:last-child {
+  border: solid gainsboro !important;
+}
+
+[data-control="outilPanneaux"] .panneau__retour::before {
+  transition: transform 0.2s !important;
+}
+
+[data-control="outilPanneaux"] .panneau__retour:hover::before {
+  transform: none !important;
+  transition: transform 0.2s !important;
+}
+
+.panneau__retour:hover {
+   background-color: rgb(240, 240, 240) !important;
+}
+
+body[data-theme="dark"] .panneau__retour:hover {
+   background-color: rgb(40, 40, 40) !important;
+}
+
+@media only screen and (max-width: 499px), only screen and (max-device-width: 480px) and (orientation: portrait) { .listeCours [data-control="outilPanneaux"] {
+  width: 295px !important;
+  }
+}
+
+.publicationEleve__expediteur > span {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+.publicationEleve__date > span.date > span {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+.lirePlus__texte > pre {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+body[data-theme="dark"] .sectionMesBulletins--reduit .sectionResultatsMinisteriels .sectionResultatsMinisteriels__lienResultatsMinisteriels::after {
+  filter: brightness(0) invert(1) !important;
+}
+
+body[data-theme="dark"] a.telechargementDocument::after {
+  filter: brightness(0) invert(1) !important;
+}
+
+body[data-theme="dark"] span.historiqueAssiduite__motifLibelle {
+  color: white !important;
+}
+
+body[data-theme="dark"] .historiqueAssiduite__uneAbsence .historiqueAssiduite__typeAbsence {
+  filter: brightness(0) invert(1) !important;
+}
+
+#panneauLateral.panneau.actif {
+  min-height: 190px !important;
+}
+
+.voirPlusListeDistant__message {
+  display: none !important;
+}
+
+.sectionMesBulletins--reduit .mesBulletins__message {
+  margin-left: 5px !important;
+  display: contents !important;
+}
