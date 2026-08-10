@@ -4,9 +4,9 @@
 
 Bienvenue sur la page principale du développement de Mozaïk Plus !
 
-* Allez dans la section "Releases" pour télécharger la dernière version !
+* Allez dans la section ["Releases"](https://github.com/Willixau/MozaikPlus/releases) pour télécharger la dernière version !
 
 
 Welcome to the official development page of Mozaïk Plus !
 
-* Go to "Releases" to download the latest version !
+* Go to ["Releases"](https://github.com/Willixau/MozaikPlus/releases) to download the latest version !
